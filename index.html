@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <script src="test.js"></script>
+    <link rel="stylesheet" href="fonts/remixicon.css">
+    <!-- font link here  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- typewriter link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- typewriter link end  -->
+
+    <!-- owl-carousel starts  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- owl-carousel ends  -->
+
+
+     <!-- Alpine.js link -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- alpine js link ends  -->
+
+    <!-- technical skill level internal css  -->
+    <style>
+        .line{
+            position: relative;
+        }
+        .line::before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: red;
+            border-radius: 6px;
+        }
+        .html::before{
+            width: 90%;
+        }
+        .css::before{
+            width: 70%;
+        }
+        .js::before{
+            width: 55%;
+        }
+        .php::before{
+            width: 75%;
+        }
+        .laravel::before{
+            width: 80%;
+        }
+        .mysql::before{
+            width: 45%;
+        }
+    </style>
+    <!-- technical skill level internal css end  -->
+
+</head>
+<body id="body" class="bg-black text-white shadow-lg font-['Poppins']">
+    <!-- Nav section starts  -->
+
+    <div class="px-32 py-5 fixed top-0 right-0 left-0 shadow-md z-50 bg-red-600" id="nav">
+        <div class="flex justify-between">
+            <div><h1 class="text-2xl font-bold">Jes<span class="text-black">H</span>an <span class="text-green-600 text-3xl">.</span></h1></div>
+            <ul class="text-xl space-x-3 my-2">
+                <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#home">Home</a></li>
+                <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#about">About Us</a></li>
+                <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#skill">Skills</a></li>
+                <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#services">Services</a></li>
+                <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#portfolio">Portfolio</a></li>
+                <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="text-xl my-2" onclick="darkLight()">
+                <i class="ri-sun-line align-baseline" id="sun"></i>
+                <i class="ri-moon-line align-baseline hidden" id="moon"></i>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- Nav section ends  -->
+
+    <!-- Home section starts  -->
+    <div id="home" class="px-32 bg-[url('image/jeshan.png')] bg-fixed bg-cover bg-no-repeat bg-center w-full h-screen">
+        <!-- <img src="image/jeshan.png" alt="" class="object-cover bg-fixed"> -->
+        <div class="top-[50%] absolute text-2xl font-semibold">
+            <h1 class="text-3xl font-bold text-blue-600">Hey, I am</h1>
+            <h1 class="text-6xl font-bold">Jeshan Tiwari,</h1>
+            <span class="text-2xl font-bold text-red-600 typing"></span>
+            <button class="bg-blue-600 px-4 py-2 block my-2 rounded-lg hover:bg-blue-800 text-white">Contact Me<i class="ri-arrow-right-s-fill align-middle text-4xl"></i></button>
+        </div>
+    </div>
+    <!-- home section ends  -->
+
+    <!-- About section starts  -->
+
+    <div class="px-32 py-14" id="about">
+        <div class="grid grid-cols-2 gap-10">
+            <div class="py-10">
+                <img src="image/aboutme.jpg" alt="" class="w-[80%] rounded-2xl">
+            </div>
+            <div class="mt-20">
+                <h1 class="text-2xl font-bold">About Me.</h1>
+                <h1 class="text-xl font-semibold mt-5">I'm Jeshan, a Full Stack Web Developer. It's been more than 1.5 years, I'm working as web developer. Since I have developed many website, I have hands-on experience on Front End as well as Back End Development.</h1>
+                <div class="mt-5" x-data = "{opentab:1}">
+                    <div class="my-5 py-2 border-b-4 border-b-red-600">
+                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer mx-2 hover:bg-white hover:text-black border-b-4 border-b-red-600 hover:border-b-4 hover:border-red-600" @click="opentab=1">Experience</p>
+                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer mx-2 hover:bg-white hover:text-black  hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600" @click="opentab=2">Education</p>
+                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer hover:bg-white hover:text-black mx-2  hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600" @click="opentab=3">Skills</p>   
+                    </div>
+                    
+                    <div x-show="opentab===1" class="px-4">
+                        <ul class="list-disc">
+                            <li>I have 1.5 year work experience in Web Developping field.</li>
+                            <li>I worked as a instructor in institute.</li>
+                            <li>I worked as a web Designer.</li>
+                        </ul>
+                    </div>
+
+                    <div x-show="opentab===2" class="px-4">
+                        <ul class="list-disc">
+                            <li>I have completed Bachelor in computer Application in T.U.</li>
+                            <li>I have completed Full stack Web Development Course in B.I.T.S.</li>
+                            <li>I have also Computer Operator Certificate.</li>
+                        </ul>
+                    </div>
+
+                    <div x-show="opentab===3" class="px-4">
+                        <ul class="list-disc">
+                            <li>FullStack Development.</li>
+                            <li>Designing Web Interfaces.</li>
+                            <li>Graphic Designing.</li>
+                            <li>Editor.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- About section ends  -->
+
+    <!-- language known section here  -->
+    <div class="px-32 pt-20" id="skill">
+        <h1 class="text-3xl font-bold my-1 title text-center">Language Known</h1>
+        <h1 class="text-center text-xl"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Know <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
+
+        <div class="grid grid-cols-5 gap-5">
+            <img src="icons/html.png" alt="">
+            <img src="icons/css.png" alt="">
+            <img src="icons/js.png" alt="">
+            <img src="icons/php.png" alt="">
+            <img src="icons/laravel.png" alt="">
+        </div>
+
+        <div class="my-10">
+            <div class="border-b-4 border-b-red-600 table m-auto">
+                <h1 class="text-xl font-bold">My Technical Skills Level</h1>
+            </div>
+            <div class="grid grid-cols-2 gap-10 mt-5">
+                <div class="Frontend">
+                    <h1 class="text-2xl font-bold">FrontEnd</h1>
+                    <div class="my-2">
+                        <div class="flex justify-between">
+                            <h1>HTML</h1>
+                            <h1>90%</h1>
+                        </div>
+                        <div class="h-2 w-full bg-gray-400 line html rounded-md"></div>
+                    </div>
+
+                    <div class="my-2">
+                        <div class="flex justify-between">
+                            <h1>CSS</h1>
+                            <h1>70%</h1>
+                        </div>
+                        <div class="h-2 w-full bg-gray-400 line css rounded-md"></div>
+                    </div>
+
+                    <div class="my-2">
+                        <div class="flex justify-between">
+                            <h1>JS</h1>
+                            <h1>55%</h1>
+                        </div>
+                        <div class="h-2 w-full bg-gray-400 line js rounded-md"></div>
+                    </div>
+                </div>
+
+                <div class="Backend">
+                    <h1 class="text-2xl font-bold">BackEnd</h1>
+                    <div class="my-2">
+                        <div class="flex justify-between">
+                            <h1>PHP</h1>
+                            <h1>75%</h1>
+                        </div>
+                        <div class="h-2 w-full bg-gray-400 line php rounded-md"></div>
+                    </div>
+
+                    <div class="my-2">
+                        <div class="flex justify-between">
+                            <h1>LARAVEL</h1>
+                            <h1>80%</h1>
+                        </div>
+                        <div class="h-2 w-full bg-gray-400 line laravel rounded-md"></div>
+                    </div>
+
+                    <div class="my-2">
+                        <div class="flex justify-between">
+                            <h1>MySql</h1>
+                            <h1>45%</h1>
+                        </div>
+                        <div class="h-2 w-full bg-gray-400 line mysql rounded-md"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- language known section ends  -->
+
+    <!-- services section starts  -->
+    <div class="px-32 py-24" id="services">
+        <h1 class="text-2xl font-bold text-center">My Services</h1>
+        <h1 class="text-center text-xl"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Provide <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
+        <div class="grid grid-cols-3 gap-5">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl">
+                <div class="table m-auto py-5">
+                    <img src="logo/webdesign.png" alt="" class="rounded-full text-center w-32">
+                </div>
+                <p class="text-2xl font-bold px-5 pb-5">Web Design</p>
+                <p class="px-5 pb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
+            </div>
+
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl">
+                <div class="table m-auto py-5">
+                    <img src="logo/webdesign.png" alt="" class="rounded-full text-center w-32">
+                </div>
+                <p class="px-5 pb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
+            </div>
+
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl">
+                <div class="w-32 mx-auto py-5">
+                    <img src="logo/webdesign.png" alt="" class="rounded-full text-center">
+                </div>
+                <p class="px-5 pb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
+            </div>
+
+        </div>
+
+    </div>
+    <!-- services section ends  -->
+
+    <!-- Portfolio section starts  -->
+    <div class="px-32 py-24" id="portfolio">
+        <h1 class="text-center text-3xl font-bold">PortFolio</h1>
+        <h1 class="text-xl font-bold text-center"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> My Work <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
+
+        <div class="owl-carousel owl-portfolio">
+            <div class="grid grid-cols-2 gap-10 py-10">
+                <div>
+                    <img src="image/modernweb.jpg" alt="" class="rounded-xl">
+                </div>
+                <div class="mt-20">
+                    <h1 class="text-xl font-bold my-2">Modern Website</h1>
+                    <h1>Website adaptable to all devices with UI components and animated Interactions.</h1>
+                    <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 py-10">
+                <div>
+                    <img src="image/foodwebsite.png" alt="" class="rounded-xl">
+                </div>
+                <div class="mt-20">
+                    <h1 class="text-xl font-bold my-2">Commercial Website</h1>
+                    <h1>Website adaptable to all devices with UI components and animated Interactions.</h1>
+                    <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 py-10">
+                <div>
+                    <img src="image/educationwebsite.png" alt="" class="rounded-xl">
+                </div>
+                <div class="mt-20">
+                    <h1 class="text-xl font-bold my-2">Education Website</h1>
+                    <h1>Website adaptable to all devices with UI components and animated Interactions.</h1>
+                    <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- portfolio section ends  -->
+
+    <!-- contact section starts  -->
+    <div class="px-32 py-28" id="contact">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold">Contact Me</h1>
+            <h1 class="text-lg font-semibold my-2"><i class="ri-subtract-line align-middle text-3xl text-red-600"></i> Get in Touch <i class="ri-subtract-line align-middle text-3xl text-red-600"></i></h1>
+        </div>
+        <div class="grid grid-cols-2 gap-10 mt-10">
+           <div class="left-side">
+            <div class="flex my-4">
+                <p class="text-6xl"><i class="ri-phone-line text-blue-600"></i></p>
+            <div class="mx-2">
+                <p class="text-xl">Call Me</p>
+                <p class="text-xl">9827250670</p>
+            </div>
+            </div>
+
+            <div class="flex my-4">
+            <p class="text-6xl"><i class="ri-mail-line text-blue-600"></i></p>
+            <div class="mx-2">
+                <p class="text-xl">Email</p>
+                <p class="text-xl">jectionjection@gmail.com</p>
+            </div>
+            </div>
+
+            <div class="flex my-4">
+            <p class="text-6xl"><i class="ri-map-pin-line text-blue-600"></i></p>
+            <div class="mx-2">
+                <p class="text-xl">Location</p>
+                <p class="text-xl">Ratnanagar-14, Chitwan, Nepal</p>
+            </div>
+            </div>
+           </div>
+
+           <div class="right-side" id="formcontact">
+            <form action="" >
+                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow">
+                <input type="text" placeholder="Your Email" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow">
+                <textarea name="message" id="message" cols="10" rows="6" placeholder="Your Message" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow"></textarea>
+            </form>
+           </div>
+
+        </div>
+    </div>
+    <!-- contact section ends  -->
+
+    <!-- Footer section starts  -->
+    <div class="px-32 py-16 bg-blue-600 text-white">
+        <div class="grid grid-cols-3 gap-5">
+            <div>
+                <p class="text-4xl font-bold">Jeshan Tiwari</p>
+                <p class="text-xl px-4">FullStack Developper</p>
+                <p class="my-5 w-fit bg-red-600 rounded-xl hover:bg-red-800 px-4 py-4 text-xl font-bold cursor-pointer"><a href="" class="">Download CV </a> <i class="ri-download-2-line align-middle"></i> </p>
+            </div>
+
+            <div>
+                <p class="text-4xl font-bold">Quick Links</p>
+                <ul class="my-2">
+                    <li class="hover:text-slate-300 font-bold"><a href="">Home</a></li>
+                    <li class="hover:text-slate-300 font-bold"><a href="">About</a></li>
+                    <li class="hover:text-slate-300 font-bold"><a href="">Services</a></li>
+                    <li class="hover:text-slate-300 font-bold"><a href="">Skills</a></li>
+                    <li class="hover:text-slate-300 font-bold"><a href="">PortFolio</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h1 class="text-4xl font-bold">Contact Us</h1>
+                <div class="my-3">
+                    <i class="ri-instagram-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"></i>
+                    <i class="ri-facebook-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"></i>
+                    <i class="ri-linkedin-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"></i>
+                    <i class="ri-twitter-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"></i>
+                    <i class="ri-github-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"></i>
+
+                </div>
+            </div>
+
+        </div>
+
+      <div class="flex justify-between mt-10 bg-black p-4 rounded-lg">
+        <p>Copyright &copy; 2022.All Rights Reserved.</p>
+        <p>Developed by Jeshan Tiwari</p>
+
+      </div>
+
+    </div>
+
+    <!-- Footer Section ends  -->
+
+    <div class="fixed z-40 bottom-10 right-6" id="upbutton" onclick="gototop()">
+        <a href="#home"><i class="p-6 text-xl text-white bg-yellow-400 rounded-full ri-arrow-up-line text-bold"></i></a>
+    </div>
+   
+
+
+
+    <!-- js part here  -->
+
+    <script>
+        let sun = document.getElementById('sun');
+        let moon = document.getElementById('moon');
+        let body = document.getElementById('body');
+        let nav = document.getElementById('nav');
+        let formcontact = document.getElementById('formcontact');
+        function darkLight(){
+            sun.classList.toggle("hidden");
+            moon.classList.toggle("hidden");
+            body.classList.toggle("bg-[#dad4d3]");
+            body.classList.toggle("text-white");
+            formcontact.classList.toggle("text-white");
+            
+        }
+
+        // typewriter js 
+        var typed = new Typed(".typing",{
+            strings: ["FullStack Developper","Web Designer","Freelancer","Video Editor"],
+            typespeed: 500,
+            backspeed: 40,
+            loop: true,
+        });
+        // typewriter js end 
+
+        // owl carousel starts 
+
+        var owl = $('.owl-portfolio');
+        owl.owlCarousel({
+            items:1,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+
+        });
+
+        // owl carousel ends 
+
+        var upbutton = document.getElementById('upbutton');
+        upbutton.style.display ='none';
+        window.onscroll = function()
+        {
+            scrollFunction();
+        }
+        function scrollFunction(){
+            if(window.scrollY > 640)
+            {
+                upbutton.style.display = 'block';
+            }
+            else{
+                upbutton.style.display = 'none';
+            }
+        }
+    </script>
+    
+</body>
+</html>
