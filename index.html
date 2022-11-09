@@ -96,12 +96,12 @@
     <!-- Nav section ends  -->
 
     <!-- Home section starts  -->
-    <div id="home" class="px-32 bg-[url('image/jeshan.png')] bg-fixed bg-cover bg-no-repeat bg-center w-full h-screen">
+    <div id="home" class="bg-[url('image/jeshan.png')] bg-fixed bg-cover bg-right bg-no-repeat xl:bg-center w-full h-screen">
         <!-- <img src="image/jeshan.png" alt="" class="object-cover bg-fixed"> -->
-        <div class="top-[50%] absolute text-2xl font-semibold">
-            <h1 class="text-3xl font-bold text-blue-600">Hey, I am</h1>
-            <h1 class="text-6xl font-bold">Jeshan Tiwari,</h1>
-            <span class="text-2xl font-bold text-red-600 typing"></span>
+        <div class="xl:top-[50%] top-[60%] absolute text-2xl font-semibold xl:px-32 px-4">
+            <h1 class="md:text-3xl font-bold text-blue-600 text-md">Hey, I am</h1>
+            <h1 class="md:text-6xl font-bold text-2xl">Jeshan Tiwari,</h1>
+            <span class="md:text-2xl text-xl font-bold text-red-600 typing"></span>
             <button class="bg-blue-600 px-4 py-2 block my-2 rounded-lg hover:bg-blue-800 text-white">Contact Me<i class="ri-arrow-right-s-fill align-middle text-4xl"></i></button>
         </div>
     </div>
@@ -109,22 +109,22 @@
 
     <!-- About section starts  -->
 
-    <div class="px-32 py-14" id="about">
-        <div class="grid grid-cols-2 gap-10">
+    <div class="xl:px-32 px-2 py-14" id="about">
+        <div class="grid xl:grid-cols-2 grid-cols-1 xl:gap-10 gap-4">
             <div class="py-10">
                 <img src="image/aboutme.jpg" alt="" class="w-[80%] rounded-2xl">
             </div>
-            <div class="mt-20">
+            <div class="xl:mt-20 mt-5">
                 <h1 class="text-2xl font-bold">About Me.</h1>
                 <h1 class="text-xl font-semibold mt-5">I'm Jeshan, a Full Stack Web Developer. It's been more than 1.5 years, I'm working as web developer. Since I have developed many website, I have hands-on experience on Front End as well as Back End Development.</h1>
                 <div class="mt-5" x-data = "{opentab:1}">
                     <div class="my-5 py-2 border-b-4 border-b-red-600">
-                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer mx-2 hover:bg-white hover:text-black border-b-4 border-b-red-600 hover:border-b-4 hover:border-red-600" @click="opentab=1">Experience</p>
-                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer mx-2 hover:bg-white hover:text-black  hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600" @click="opentab=2">Education</p>
-                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer hover:bg-white hover:text-black mx-2  hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600" @click="opentab=3">Skills</p>   
+                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer sm:mx-2 hover:bg-white hover:text-black border-b-4 border-b-red-600 hover:border-b-4 hover:border-red-600" @click="opentab=1">Experience</p>
+                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer sm:mx-2 hover:bg-white hover:text-black  hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600" @click="opentab=2">Education</p>
+                        <p class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer hover:bg-white hover:text-black sm:mx-2  hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600" @click="opentab=3">Skills</p>   
                     </div>
                     
-                    <div x-show="opentab===1" class="px-4">
+                    <div x-show="opentab===1" class="sm:px-4">
                         <ul class="list-disc">
                             <li>I have 1.5 year work experience in Web Developping field.</li>
                             <li>I worked as a instructor in institute.</li>
@@ -132,7 +132,7 @@
                         </ul>
                     </div>
 
-                    <div x-show="opentab===2" class="px-4">
+                    <div x-show="opentab===2" class="sm:px-4">
                         <ul class="list-disc">
                             <li>I have completed Bachelor in computer Application in T.U.</li>
                             <li>I have completed Full stack Web Development Course in B.I.T.S.</li>
@@ -140,7 +140,7 @@
                         </ul>
                     </div>
 
-                    <div x-show="opentab===3" class="px-4">
+                    <div x-show="opentab===3" class="sm:px-4">
                         <ul class="list-disc">
                             <li>FullStack Development.</li>
                             <li>Designing Web Interfaces.</li>
@@ -158,7 +158,7 @@
     <!-- About section ends  -->
 
     <!-- language known section here  -->
-    <div class="px-32 pt-20" id="skill">
+    <div class="sm:px-32 pt-20 px-4" id="skill">
         <h1 class="text-3xl font-bold my-1 title text-center">Language Known</h1>
         <h1 class="text-center text-xl"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Know <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
 
@@ -236,29 +236,31 @@
     <!-- language known section ends  -->
 
     <!-- services section starts  -->
-    <div class="px-32 py-24" id="services">
+    <div class="lg:px-32 py-24 md:px-10 px-9" id="services">
         <h1 class="text-2xl font-bold text-center">My Services</h1>
         <h1 class="text-center text-xl"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Provide <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
-        <div class="grid grid-cols-3 gap-5">
-            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl">
-                <div class="table m-auto py-5">
-                    <img src="logo/webdesign.png" alt="" class="rounded-full text-center w-32">
+        <div class="grid xl:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-5">
+                <div class="table m-auto p-5 bg-gray-200 rounded-full">
+                    <img src="services/webdesign.png" alt="" class="text-center w-32">
                 </div>
-                <p class="text-2xl font-bold px-5 pb-5">Web Design</p>
+                <p class="text-2xl font-bold px-5 pb-5 mt-5">FrontEnd Development</p>
                 <p class="px-5 pb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
             </div>
 
-            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl">
-                <div class="table m-auto py-5">
-                    <img src="logo/webdesign.png" alt="" class="rounded-full text-center w-32">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-5">
+                <div class="table m-auto p-5 bg-gray-200 rounded-full">
+                    <img src="services/webdevelopment.png" alt="" class="text-center w-32">
                 </div>
+                <p class="text-2xl font-bold px-5 pb-5 mt-5">BackEnd Development</p>
                 <p class="px-5 pb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
             </div>
 
-            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl">
-                <div class="w-32 mx-auto py-5">
-                    <img src="logo/webdesign.png" alt="" class="rounded-full text-center">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-5">
+                <div class="table m-auto p-7 bg-gray-200 rounded-full">
+                    <img src="services/fullstackdevelopment.png" alt="" class="w-32 text-center">
                 </div>
+                <p class="text-2xl font-bold px-5 pb-5 mt-5">FullStack Development</p>
                 <p class="px-5 pb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
             </div>
 
@@ -268,40 +270,40 @@
     <!-- services section ends  -->
 
     <!-- Portfolio section starts  -->
-    <div class="px-32 py-24" id="portfolio">
+    <div class="lg:px-32 py-24 md:px-10 px-2" id="portfolio">
         <h1 class="text-center text-3xl font-bold">PortFolio</h1>
         <h1 class="text-xl font-bold text-center"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> My Work <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
 
         <div class="owl-carousel owl-portfolio">
-            <div class="grid grid-cols-2 gap-10 py-10">
-                <div>
+            <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
+                <div class="">
                     <img src="image/modernweb.jpg" alt="" class="rounded-xl">
                 </div>
-                <div class="mt-20">
-                    <h1 class="text-xl font-bold my-2">Modern Website</h1>
-                    <h1>Website adaptable to all devices with UI components and animated Interactions.</h1>
+                <div class="lg:mt-16">
+                    <h1 class="md:text-xl text-lg font-bold sm:my-2">Modern Website</h1>
+                    <h1 class="sm:text-lg text-sm">Website adaptable to all devices with UI components and animated Interactions.</h1>
                     <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-10 py-10">
-                <div>
+            <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
+                <div class="">
                     <img src="image/foodwebsite.png" alt="" class="rounded-xl">
                 </div>
-                <div class="mt-20">
-                    <h1 class="text-xl font-bold my-2">Commercial Website</h1>
-                    <h1>Website adaptable to all devices with UI components and animated Interactions.</h1>
+                <div class="lg:mt-16">
+                    <h1 class="md:text-xl text-lg font-bold sm:my-2">Commercial Website</h1>
+                    <h1 class="sm:text-lg text-sm">Website adaptable to all devices with UI components and animated Interactions.</h1>
                     <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-10 py-10">
-                <div>
+            <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
+                <div class="">
                     <img src="image/educationwebsite.png" alt="" class="rounded-xl">
                 </div>
-                <div class="mt-20">
-                    <h1 class="text-xl font-bold my-2">Education Website</h1>
-                    <h1>Website adaptable to all devices with UI components and animated Interactions.</h1>
+                <div class="lg:mt-16">
+                    <h1 class="md:text-xl text-lg font-bold sm:my-2">Education Website</h1>
+                    <h1 class="sm:text-lg text-sm">Website adaptable to all devices with UI components and animated Interactions.</h1>
                     <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
                 </div>
             </div>
@@ -311,12 +313,12 @@
     <!-- portfolio section ends  -->
 
     <!-- contact section starts  -->
-    <div class="px-32 py-28" id="contact">
+    <div class="lg:px-32 py-28 md:px-10 px-9" id="contact">
         <div class="text-center">
             <h1 class="text-4xl font-bold">Contact Me</h1>
             <h1 class="text-lg font-semibold my-2"><i class="ri-subtract-line align-middle text-3xl text-red-600"></i> Get in Touch <i class="ri-subtract-line align-middle text-3xl text-red-600"></i></h1>
         </div>
-        <div class="grid grid-cols-2 gap-10 mt-10">
+        <div class="grid md:grid-cols-2 gap-10 mt-10 grid-cols-1">
            <div class="left-side">
             <div class="flex my-4">
                 <p class="text-6xl"><i class="ri-phone-line text-blue-600"></i></p>
@@ -356,8 +358,8 @@
     <!-- contact section ends  -->
 
     <!-- Footer section starts  -->
-    <div class="px-32 py-16 bg-blue-600 text-white">
-        <div class="grid grid-cols-3 gap-5">
+    <div class="lg:px-32 md:px-10 px-9 py-16 bg-blue-600 text-white">
+        <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
             <div>
                 <p class="text-4xl font-bold">Jeshan Tiwari</p>
                 <p class="text-xl px-4">FullStack Developper</p>
@@ -389,9 +391,9 @@
 
         </div>
 
-      <div class="flex justify-between mt-10 bg-black p-4 rounded-lg">
+      <div class="sm:flex sm:justify-between mt-10 bg-black sm:p-4 p-2 rounded-lg">
         <p>Copyright &copy; 2022.All Rights Reserved.</p>
-        <p>Developed by Jeshan Tiwari</p>
+        <p class="mt-4">Developed by Jeshan Tiwari</p>
 
       </div>
 
@@ -399,8 +401,8 @@
 
     <!-- Footer Section ends  -->
 
-    <div class="fixed z-40 bottom-10 left-6" id="upbutton" onclick="gototop()">
-        <a href="#home"><i class="p-6 text-xl text-white bg-yellow-400 rounded-full ri-arrow-up-line text-bold"></i></a>
+    <div class="fixed z-40 bottom-4 sm:bottom-10 left-6" id="upbutton" onclick="gototop()">
+        <a href="#home"><i class="p-4 text-xl text-white bg-yellow-400 rounded-full ri-arrow-up-line text-bold"></i></a>
     </div>
    
 
