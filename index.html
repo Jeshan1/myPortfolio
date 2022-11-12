@@ -33,6 +33,12 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- alpine js link ends  -->
 
+    <!-- animate.css link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- animate.css ends  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- technical skill level internal css  -->
     <style>
         .line{
@@ -73,10 +79,10 @@
 <body id="body" class="bg-black text-white shadow-lg font-['Poppins']">
     <!-- Nav section starts  -->
 
-    <div class="md:px-32 px-8 py-5 fixed top-0 right-0 left-0 shadow-md z-50 bg-red-600 md:block hidden" id="nav">
+    <div class="md:px-10 lg:px-32 px-8 py-5 fixed top-0 right-0 left-0 shadow-md z-50 bg-red-600 md:block hidden" id="nav">
         <div class="flex justify-between">
             <div><h1 class="text-2xl font-bold">Jes<span class="text-black">H</span>an <span class="text-green-600 text-3xl">.</span></h1></div>
-            <ul class="text-xl space-x-3 my-2">
+            <ul class="text-xl space-x-1 my-2">
                 <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#home">Home</a></li>
                 <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#about">About Us</a></li>
                 <li class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400"><a href="#skill">Skills</a></li>
@@ -96,7 +102,7 @@
     <!-- Nav section ends  -->
 
     <!-- Home section starts  -->
-    <div id="home" class="bg-[url('image/mobile.png')] bg-fixed bg-cover bg-no-repeat md:bg-[url('image/jeshan.png')] bg-center w-full h-screen">
+    <div id="home" class=" bg-fixed bg-cover bg-no-repeat bg-[url('image/jeshan.png')] lg:bg-center md:bg-right bg-right w-full h-screen">
         <!-- <img src="image/jeshan.png" alt="" class="object-cover bg-fixed"> -->
         <div class="xl:top-[50%] top-[60%] absolute text-2xl font-semibold xl:px-32 px-4">
             <h1 class="md:text-3xl font-bold text-blue-600 text-md">Hey, I am</h1>
@@ -111,10 +117,10 @@
 
     <div class="xl:px-32 sm:px-10 px-2 py-14" id="about">
         <div class="grid xl:grid-cols-2 grid-cols-1 xl:gap-10 gap-4">
-            <div class="py-10">
+            <div class="py-10 animate__animated animate__backInLeft wow">
                 <img src="image/aboutme.jpg" alt="" class="w-[80%] rounded-2xl">
             </div>
-            <div class="xl:mt-20 mt-5">
+            <div class="xl:mt-20 mt-5 wow animate__animated animate__slideInRight">
                 <h1 class="text-2xl font-bold">About Me.</h1>
                 <h1 class="text-xl font-semibold mt-5">I'm Jeshan, a Full Stack Web Developer. It's been more than 1.5 years, I'm working as web developer. Since I have developed many website, I have hands-on experience on Front End as well as Back End Development.</h1>
                 <div class="mt-5" x-data = "{opentab:1}">
@@ -159,10 +165,10 @@
 
     <!-- language known section here  -->
     <div class="sm:px-32 pt-20 px-4" id="skill">
-        <h1 class="text-3xl font-bold my-1 title text-center">Language Known</h1>
-        <h1 class="text-center text-xl"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Know <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
+        <h1 class="text-3xl font-bold my-1 title text-center wow animate__animated animate__slideInDown">Language Known</h1>
+        <h1 class="text-center text-xl wow animate__animated animate__slideInLeft"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Know <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
 
-        <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5">
+        <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5 wow animate__animated animate__zoomIn" data-wow-duration="2s" data-wow-delay="0s">
             <img src="icons/html.png" alt="">
             <img src="icons/css.png" alt="">
             <img src="icons/js.png" alt="">
@@ -173,10 +179,10 @@
 
         <div class="my-10">
             <div class="border-b-4 border-b-red-600 table m-auto">
-                <h1 class="text-xl font-bold">My Technical Skills Level</h1>
+                <h1 class="text-xl font-bold wow animate__animated animate__slideInDown">My Technical Skills Level</h1>
             </div>
             <div class="grid grid-cols-2 gap-10 mt-5">
-                <div class="Frontend">
+                <div class="Frontend wow animate__animated animate__slideInLeft">
                     <h1 class="text-2xl font-bold">FrontEnd</h1>
                     <div class="my-2">
                         <div class="flex justify-between">
@@ -203,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="Backend">
+                <div class="Backend wow animate__animated animate__slideInRight">
                     <h1 class="text-2xl font-bold">BackEnd</h1>
                     <div class="my-2">
                         <div class="flex justify-between">
@@ -238,10 +244,10 @@
 
     <!-- services section starts  -->
     <div class="lg:px-32 py-24 md:px-10 px-9" id="services">
-        <h1 class="text-2xl font-bold text-center">My Services</h1>
-        <h1 class="text-center text-xl"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Provide <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
+        <h1 class="text-2xl font-bold text-center wow animate__animated animate__slideInLeft">My Services</h1>
+        <h1 class="text-center text-xl wow animate__animated animate__slideInRight"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What I Provide <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
         <div class="grid xl:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 md:mt-10">
-            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2 wow animate__animated animate__zoomIn">
                 <div class="table m-auto p-3 bg-gray-200 rounded-full">
                     <img src="services/webdesign.png" alt="" class="text-center w-24">
                 </div>
@@ -249,7 +255,7 @@
                 <p class="px-5 text-md text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
             </div>
 
-            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2 wow animate__animated animate__zoomIn">
                 <div class="table m-auto p-3 bg-gray-200 rounded-full">
                     <img src="services/webdevelopment.png" alt="" class="text-center w-24">
                 </div>
@@ -257,7 +263,7 @@
                 <p class="px-5 text-md text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti repudiandae saepe sequi inventore accusamus, reprehenderit, et illo consectetur fugit quia!</p>   
             </div>
             
-            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2">
+            <div class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2 wow animate__animated animate__zoomIn">
                 <div class="table m-auto p-3 bg-gray-200 rounded-full">
                     <img src="services/fullstack.png" alt="" class="text-center w-24">
                 </div>
@@ -274,15 +280,15 @@
 
     <!-- Portfolio section starts  -->
     <div class="lg:px-32 py-24 md:px-10 px-2" id="portfolio">
-        <h1 class="text-center text-3xl font-bold">PortFolio</h1>
-        <h1 class="text-xl font-bold text-center"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> My Work <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
+        <h1 class="text-center text-3xl font-bold wow animate__animated animate__backInLeft">PortFolio</h1>
+        <h1 class="text-xl font-bold text-center wow animate__animated animate__slideInLeft"><i class="ri-subtract-line align-middle text-6xl text-red-600"></i> My Work <i class="ri-subtract-line align-middle text-6xl text-red-600"></i></h1>
 
         <div class="owl-carousel owl-portfolio">
             <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
-                <div class="">
+                <div class="wow animate__animated animate__backInLeft">
                     <img src="image/modernweb.jpg" alt="" class="rounded-xl">
                 </div>
-                <div class="lg:mt-16">
+                <div class="lg:mt-16 wow animate__animated animate__backInRight">
                     <h1 class="md:text-xl text-lg font-bold sm:my-2">Modern Website</h1>
                     <h1 class="sm:text-lg text-sm">Website adaptable to all devices with UI components and animated Interactions.</h1>
                     <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
@@ -290,10 +296,10 @@
             </div>
 
             <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
-                <div class="">
+                <div class="wow animate__animated animate__backInRight">
                     <img src="image/foodwebsite.png" alt="" class="rounded-xl">
                 </div>
-                <div class="lg:mt-16">
+                <div class="lg:mt-16 wow animate__animated animate__backInLeft">
                     <h1 class="md:text-xl text-lg font-bold sm:my-2">Commercial Website</h1>
                     <h1 class="sm:text-lg text-sm">Website adaptable to all devices with UI components and animated Interactions.</h1>
                     <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
@@ -301,10 +307,10 @@
             </div>
 
             <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
-                <div class="">
+                <div class="wow animate__animated animate__backInRight">
                     <img src="image/educationwebsite.png" alt="" class="rounded-xl">
                 </div>
-                <div class="lg:mt-16">
+                <div class="lg:mt-16 wow animate__animated animate__backInLeft">
                     <h1 class="md:text-xl text-lg font-bold sm:my-2">Education Website</h1>
                     <h1 class="sm:text-lg text-sm">Website adaptable to all devices with UI components and animated Interactions.</h1>
                     <h1 class="mt-4"><a href="" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800">Demo <i class="ri-arrow-right-line align-middle"></i></a></h1>
@@ -318,12 +324,12 @@
     <!-- contact section starts  -->
     <div class="lg:px-32 py-28 md:px-10 px-9" id="contact">
         <div class="text-center">
-            <h1 class="text-4xl font-bold">Contact Me</h1>
-            <h1 class="text-lg font-semibold my-2"><i class="ri-subtract-line align-middle text-3xl text-red-600"></i> Get in Touch <i class="ri-subtract-line align-middle text-3xl text-red-600"></i></h1>
+            <h1 class="text-4xl font-bold wow animate__animated animate__slideInDown ">Contact Me</h1>
+            <h1 class="text-lg font-semibold my-2 wow animate__animated animate__slideInLeft"><i class="ri-subtract-line align-middle text-3xl text-red-600"></i> Get in Touch <i class="ri-subtract-line align-middle text-3xl text-red-600"></i></h1>
         </div>
         <div class="grid md:grid-cols-2 gap-10 mt-10 grid-cols-1">
            <div class="left-side">
-            <div class="flex my-4">
+            <div class="flex my-4 wow animate__animated animate__slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
                 <p class="text-6xl"><i class="ri-phone-line text-blue-600"></i></p>
             <div class="mx-2">
                 <p class="text-xl">Call Me</p>
@@ -331,7 +337,7 @@
             </div>
             </div>
 
-            <div class="flex my-4">
+            <div class="flex my-4 wow animate__animated animate__slideInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
             <p class="text-6xl"><i class="ri-mail-line text-blue-600"></i></p>
             <div class="mx-2">
                 <p class="text-xl">Email</p>
@@ -339,7 +345,7 @@
             </div>
             </div>
 
-            <div class="flex my-4">
+            <div class="flex my-4 wow animate__animated animate__slideInLeft" data-wow-duration="2s" data-wow-delay="0.8s">
             <p class="text-6xl"><i class="ri-map-pin-line text-blue-600"></i></p>
             <div class="mx-2">
                 <p class="text-xl">Location</p>
@@ -350,9 +356,9 @@
 
            <div class="right-side" id="formcontact">
             <form action="" >
-                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow">
-                <input type="text" placeholder="Your Email" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow">
-                <textarea name="message" id="message" cols="10" rows="6" placeholder="Your Message" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow"></textarea>
+                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__fadeInTopRight">
+                <input type="text" placeholder="Your Email" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__fadeInTopRight">
+                <textarea name="message" id="message" cols="10" rows="6" placeholder="Your Message" class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__zoomInRight"></textarea>
             </form>
            </div>
 
@@ -363,13 +369,13 @@
     <!-- Footer section starts  -->
     <div class="lg:px-32 md:px-10 px-9 py-16 bg-blue-600 text-white">
         <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
-            <div>
+            <div class="wow animate__animated animate__slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
                 <p class="text-4xl font-bold">Jeshan Tiwari</p>
                 <p class="text-xl px-4">FullStack Developper</p>
                 <p class="my-5 w-fit bg-red-600 rounded-xl hover:bg-red-800 px-4 py-4 text-xl font-bold cursor-pointer"><a href="" class="">Download CV </a> <i class="ri-download-2-line align-middle"></i> </p>
             </div>
 
-            <div>
+            <div class="wow animate__animated animate__slideInDown" data-wow-duration="2s" data-wow-delay="0.1s">
                 <p class="text-4xl font-bold">Quick Links</p>
                 <ul class="my-2">
                     <li class="hover:text-slate-300 font-bold"><a href="">Home</a></li>
@@ -380,7 +386,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="wow animate__animated animate__slideInRight" data-wow-duration="2s" data-wow-delay="0s">
                 <h1 class="text-4xl font-bold">Contact Us</h1>
                 <div class="my-3">
                     <i class="ri-instagram-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"></i>
@@ -395,16 +401,15 @@
         </div>
 
       <div class="sm:flex sm:justify-between mt-10 bg-black sm:p-4 p-2 rounded-lg">
-        <p>Copyright &copy; 2022.All Rights Reserved.</p>
-        <p class="">Developed by Jeshan Tiwari</p>
-
+        <p class="wow animate__animated animate__slideInLeft">Copyright &copy; 2022.All Rights Reserved.</p>
+        <p class="wow animate__animated animate__slideInRight">Developed by Jeshan Tiwari</p>
       </div>
 
     </div>
     <!-- Footer Section ends  -->
     <!-- gototop button starts  -->
-    <div class="fixed z-40 bottom-4 sm:bottom-10 left-6" id="upbutton" onclick="gototop()">
-        <a href="#home"><i class="p-4 text-xl text-white bg-yellow-400 rounded-full ri-arrow-up-line text-bold"></i></a>
+    <div class="fixed z-40 bottom-4 sm:bottom-10 left-6" id="upbutton">
+        <a href="#home"><i class="p-4 text-xl text-white bg-yellow-400 rounded-full ri-arrow-up-line font-bold"></i></a>
     </div>
    <!-- gototop button ends  -->
     <!-- mobile navigation bar starts  -->
@@ -419,8 +424,8 @@
                         <i class="ri-close-line align-middle font-bold text-2xl" id="movclose"></i>
                     </div>
                     <div class="text-xl inline-block" onclick="darkLight()">
-                        <i class="ri-sun-line align-middle" id="sun"></i>
-                        <i class="ri-moon-line align-middle hidden" id="moon"></i>
+                        <i class="ri-sun-line align-middle" id="sunn"></i>
+                        <i class="ri-moon-line align-middle hidden" id="moonn"></i>
                     </div>
 
                 </div>
@@ -477,11 +482,15 @@
         let mon = document.getElementById('moon');
         let body = document.getElementById('body');
         let nav = document.getElementById('nav');
+        let sunn = document.getElementById('sunn');
+        let moonn = document.getElementById('moonn');
         
         let formcontact = document.getElementById('formcontact');
 
         
         function darkLight(){
+            sunn.classList.toggle("hidden");
+            moonn.classList.toggle("hidden");
             sun.classList.toggle("hidden");
             mon.classList.toggle("hidden");
             body.classList.toggle("bg-[#dad4d3]");
@@ -545,6 +554,12 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+    <!-- wow js script here  -->
+    <script>
+        new WOW().init();
+    </script>
+    <!-- wow js script ends  -->
     
 </body>
 </html>
