@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeshan Tiwari</title>
+    <meta
+      name="description"
+      content="Jeshan Tiwari - Full Stack Web Developer, Web Designer and Freelancer from Nepal."
+    />
+    <title>Jeshan Tiwari | Software Engineer</title>
+
     <!-- favicon starts  -->
     <link
       rel="apple-touch-icon"
@@ -25,15 +30,48 @@
     />
     <link rel="manifest" href="image/favicon/site.webmanifest" />
     <!-- favicon ends  -->
-    <script src="test.js"></script>
+
+    <!-- Tailwind CSS (JIT CDN)  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            animation: {
+              blob: "blob 7s infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              blob: {
+                "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Tailwind CSS ends  -->
+
     <link rel="stylesheet" href="fonts/remixicon.css" />
+
     <!-- font link here  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <!-- typewriter link  -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
@@ -79,866 +117,1152 @@
     ></script>
     <!-- alpine js link ends  -->
 
-    <!-- animate.css link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- animate.css ends  -->
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
-      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
     <!-- email js part  -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-
     <script type="text/javascript">
       emailjs.init("hJ_yQ8c3iIEDIzFrL");
     </script>
     <!-- email js part end  -->
-    <!-- toaster.js parts  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
+    <!-- toaster.js parts  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css"
+      integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"
+      integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- toaster.js ends  -->
-    <!-- technical skill level internal css  -->
-    <style>
-      .line {
-        position: relative;
+
+    <style type="text/tailwindcss">
+      /* ====== Theme variables (light / dark) ====== */
+      :root {
+        --bg-base: #f1f5f9;
+        --bg-surface: #ffffff;
+        --bg-card: rgba(255, 255, 255, 0.8);
+        --bg-nav: rgba(255, 255, 255, 0.78);
+        --bg-input: rgba(255, 255, 255, 0.9);
+        --text-primary: #0f172a;
+        --text-muted: #475569;
+        --border-base: rgba(15, 23, 42, 0.1);
+        --shadow-card: 0 20px 40px -20px rgba(15, 23, 42, 0.25);
       }
-      .line::before {
+      .dark {
+        --bg-base: #020617;
+        --bg-surface: #0f172a;
+        --bg-card: rgba(255, 255, 255, 0.04);
+        --bg-nav: rgba(2, 6, 23, 0.72);
+        --bg-input: rgba(255, 255, 255, 0.06);
+        --text-primary: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border-base: rgba(255, 255, 255, 0.1);
+        --shadow-card: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg-base);
+        color: var(--text-primary);
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+
+      /* ====== Themed surface + text helpers ====== */
+      .bg-surface { background-color: var(--bg-surface); }
+      .bg-card { background-color: var(--bg-card); box-shadow: var(--shadow-card); }
+      .bg-nav { background-color: var(--bg-nav); }
+      .bg-input { background-color: var(--bg-input); }
+      .text-muted { color: var(--text-muted); }
+      .text-primary { color: var(--text-primary); }
+
+      /* ====== Gradients ====== */
+      .text-gradient {
+        background-image: linear-gradient(to right, #6366f1, #8b5cf6, #d946ef);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .dark .text-gradient {
+        background-image: linear-gradient(to right, #818cf8, #a78bfa, #e879f9);
+      }
+      .bg-gradient-accent {
+        background-image: linear-gradient(to right, #6366f1, #8b5cf6, #d946ef);
+      }
+      .bg-accent-soft { background-color: rgba(139, 92, 246, 0.15); }
+      .text-accent { color: #8b5cf6; }
+      .shadow-glow { box-shadow: 0 10px 40px -10px rgba(139, 92, 246, 0.5); }
+
+      /* ====== Navbar links ====== */
+      .nav-link {
+        position: relative;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .nav-link::after {
         content: "";
         position: absolute;
-        height: 100%;
-        width: 100%;
         left: 0;
-        top: 0;
-        background: red;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, #6366f1, #d946ef);
+        transition: width 0.3s ease;
+        border-radius: 2px;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--text-primary);
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      /* ====== Footer quick links ====== */
+      .link-item { color: var(--text-muted); transition: color 0.3s ease; }
+      .link-item:hover { color: var(--text-primary); }
+
+      /* ====== Scroll reveal ====== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .reveal.reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-delay-1 { transition-delay: 0.15s; }
+      .reveal-delay-2 { transition-delay: 0.3s; }
+      .reveal-delay-3 { transition-delay: 0.45s; }
+
+      /* ====== Skill bars ====== */
+      .skill-bar {
+        width: 0%;
+        transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* ====== Custom scrollbar ====== */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--bg-base); }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#6366f1, #d946ef);
         border-radius: 6px;
       }
-      .html::before {
-        width: 90%;
+      ::selection {
+        background: rgba(139, 92, 246, 0.4);
+        color: #fff;
       }
-      .css::before {
-        width: 70%;
-      }
-      .js::before {
-        width: 55%;
-      }
-      .php::before {
-        width: 75%;
-      }
-      .laravel::before {
-        width: 80%;
-      }
-      .mysql::before {
-        width: 45%;
-      }
+
+      /* ====== OwlCarousel dots ====== */
+      .owl-theme .owl-dots .owl-dot span { background: rgba(139, 92, 246, 0.3); }
+      .owl-theme .owl-dots .owl-dot.active span { background: #8b5cf6; }
     </style>
-    <!-- technical skill level internal css end  -->
   </head>
-  <body id="body" class="bg-black text-white shadow-lg font-['Poppins']">
-    <!-- Nav section starts  -->
 
-    <div
-      class="md:px-10 lg:px-32 px-8 py-5 fixed top-0 right-0 left-0 shadow-md z-50 bg-red-600 md:block hidden"
-      id="nav"
+  <body class="font-poppins antialiased overflow-x-hidden">
+    <!-- ====== NAVBAR ====== -->
+    <nav
+      id="navbar"
+      class="bg-nav fixed top-0 inset-x-0 z-50 border-b border-slate-200 dark:border-white/10 backdrop-blur-xl transition-all duration-300"
     >
-      <div class="flex justify-between">
-        <div>
-          <h1 class="text-2xl font-bold">
-            Jes<span class="text-black">H</span>an
-            <span class="text-green-600 text-3xl">.</span>
-          </h1>
-        </div>
-        <ul class="text-xl space-x-1 my-2">
-          <li
-            class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400 hover:duration-700"
-          >
-            <a href="#home">Home</a>
-          </li>
-          <li
-            class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400 hover:duration-700"
-          >
-            <a href="#about">About Us</a>
-          </li>
-          <li
-            class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400 hover:duration-700"
-          >
-            <a href="#skill">Skills</a>
-          </li>
-          <li
-            class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400 hover:duration-700"
-          >
-            <a href="#services">Services</a>
-          </li>
-          <li
-            class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400 hover:duration-700"
-          >
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li
-            class="inline-block hover:underline underline-offset-8 font-bold cursor-pointer hover:text-yellow-400 hover:duration-700"
-          >
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <!-- Logo -->
+          <a href="#home" class="text-2xl lg:text-3xl font-bold tracking-tight">
+            Jes<span class="text-gradient">H</span>an
+            <span class="text-gradient text-3xl">.</span>
+          </a>
 
-        <div class="text-xl my-2" onclick="darkLight()">
-          <i class="ri-sun-line align-baseline" id="sun"></i>
-          <i class="ri-moon-line align-baseline hidden" id="moon"></i>
-        </div>
-      </div>
-    </div>
-    <!-- Nav section ends  -->
-
-    <!-- Home section starts  -->
-    <div
-      id="home"
-      class="bg-[url('image/mobile1.png')] bg-fixed bg-cover bg-no-repeat md:bg-[url('image/jeshan.png')] xl:bg-center md:bg-right bg-center w-full h-screen"
-    >
-      <!-- <img src="image/jeshan.png" alt="" class="object-cover bg-fixed"> -->
-      <div
-        class="xl:top-[50%] top-[60%] absolute text-2xl font-semibold xl:px-32 px-4"
-      >
-        <h1 class="md:text-3xl font-bold text-blue-600 text-md">Hey, I am</h1>
-        <h1 class="md:text-6xl font-bold text-2xl">Jeshan Tiwari,</h1>
-        <span class="md:text-2xl text-xl font-bold text-red-600 typing"></span>
-        <button
-          class="bg-blue-600 px-4 py-2 block my-2 rounded-lg hover:bg-blue-800 text-white"
-        >
-          <a href="#contact"
-            >Contact Me<i
-              class="ri-arrow-right-s-fill align-middle text-4xl"
-            ></i
-          ></a>
-        </button>
-      </div>
-    </div>
-    <!-- home section ends  -->
-
-    <!-- About section starts  -->
-
-    <div class="xl:px-32 sm:px-10 px-2 py-14" id="about">
-      <div class="grid xl:grid-cols-2 grid-cols-1 xl:gap-10 gap-4">
-        <div class="py-10 animate__animated animate__backInLeft wow">
-          <img src="image/aboutme.jpg" alt="" class="w-[80%] rounded-2xl" />
-        </div>
-        <div class="xl:mt-20 mt-5 wow animate__animated animate__slideInRight">
-          <h1 class="text-2xl font-bold">About Me.</h1>
-          <h1 class="text-xl font-semibold mt-5">
-            I'm Jeshan, a Full Stack Web Developer. It's been more than 1.5
-            years, I'm working as web developer. Since I have developed many
-            website, I have hands-on experience on Front End as well as Back End
-            Development.
-          </h1>
-          <div class="mt-5" x-data="{opentab:1}">
-            <div class="my-5 py-2 border-b-4 border-b-red-600">
-              <p
-                class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer sm:mx-2 hover:bg-white hover:text-black border-b-4 border-b-red-600 hover:border-b-4 hover:border-red-600"
-                @click="opentab=1"
-              >
-                Experience
-              </p>
-              <p
-                class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer sm:mx-2 hover:bg-white hover:text-black hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600"
-                @click="opentab=2"
-              >
-                Education
-              </p>
-              <p
-                class="inline-block text-xl font-bold px-2 py-1 rounded-lg cursor-pointer hover:bg-white hover:text-black sm:mx-2 hover:border-b-4 hover:border-red-600 border-b-4 border-b-red-600"
-                @click="opentab=3"
-              >
-                Skills
-              </p>
-            </div>
-
-            <div x-show="opentab===1" class="sm:px-4">
-              <ul class="list-disc">
-                <li>
-                  I have 1.5 year work experience in Web Developping field.
-                </li>
-                <li>I worked as a instructor in institute.</li>
-                <li>I worked as a web Designer.</li>
-              </ul>
-            </div>
-
-            <div x-show="opentab===2" class="sm:px-4">
-              <ul class="list-disc">
-                <li>
-                  I have completed Bachelor in computer Application in T.U.
-                </li>
-                <li>
-                  I have completed Full stack Web Development Course in B.I.T.S.
-                </li>
-                <li>I have also Computer Operator Certificate.</li>
-              </ul>
-            </div>
-
-            <div x-show="opentab===3" class="sm:px-4">
-              <ul class="list-disc">
-                <li>FullStack Development.</li>
-                <li>Designing Web Interfaces.</li>
-                <li>Graphic Designing.</li>
-                <li>Editor.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- About section ends  -->
-
-    <!-- language known section here  -->
-    <div class="sm:px-32 pt-20 px-4" id="skill">
-      <h1
-        class="text-3xl font-bold my-1 title text-center wow animate__animated animate__slideInDown"
-      >
-        Language Known
-      </h1>
-      <h1
-        class="text-center text-xl wow animate__animated animate__slideInLeft"
-      >
-        <i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What
-        I Know
-        <i class="ri-subtract-line align-middle text-6xl text-red-600"></i>
-      </h1>
-
-      <div
-        class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5 wow animate__animated animate__zoomIn"
-        data-wow-duration="2s"
-        data-wow-delay="0s"
-      >
-        <img src="icons/html.png" alt="" />
-        <img src="icons/css.png" alt="" />
-        <img src="icons/js.png" alt="" />
-        <img src="icons/php.png" alt="" />
-        <img src="icons/laravel.png" alt="" />
-        <img src="icons/mysql (1).png" alt="" />
-      </div>
-
-      <div class="my-10">
-        <div class="border-b-4 border-b-red-600 table m-auto">
-          <h1
-            class="text-xl font-bold wow animate__animated animate__slideInDown"
-          >
-            My Technical Skills Level
-          </h1>
-        </div>
-        <div class="grid grid-cols-2 gap-10 mt-5">
-          <div class="Frontend wow animate__animated animate__slideInLeft">
-            <h1 class="text-2xl font-bold">FrontEnd</h1>
-            <div class="my-2">
-              <div class="flex justify-between">
-                <h1>HTML</h1>
-                <h1>90%</h1>
-              </div>
-              <div class="h-2 w-full bg-gray-400 line html rounded-md"></div>
-            </div>
-
-            <div class="my-2">
-              <div class="flex justify-between">
-                <h1>CSS</h1>
-                <h1>70%</h1>
-              </div>
-              <div class="h-2 w-full bg-gray-400 line css rounded-md"></div>
-            </div>
-
-            <div class="my-2">
-              <div class="flex justify-between">
-                <h1>JS</h1>
-                <h1>55%</h1>
-              </div>
-              <div class="h-2 w-full bg-gray-400 line js rounded-md"></div>
-            </div>
-          </div>
-
-          <div class="Backend wow animate__animated animate__slideInRight">
-            <h1 class="text-2xl font-bold">BackEnd</h1>
-            <div class="my-2">
-              <div class="flex justify-between">
-                <h1>PHP</h1>
-                <h1>75%</h1>
-              </div>
-              <div class="h-2 w-full bg-gray-400 line php rounded-md"></div>
-            </div>
-
-            <div class="my-2">
-              <div class="flex justify-between">
-                <h1>LARAVEL</h1>
-                <h1>80%</h1>
-              </div>
-              <div class="h-2 w-full bg-gray-400 line laravel rounded-md"></div>
-            </div>
-
-            <div class="my-2">
-              <div class="flex justify-between">
-                <h1>MySql</h1>
-                <h1>45%</h1>
-              </div>
-              <div class="h-2 w-full bg-gray-400 line mysql rounded-md"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- language known section ends  -->
-
-    <!-- services section starts  -->
-    <div class="lg:px-32 py-24 md:px-10 px-9" id="services">
-      <h1
-        class="text-2xl font-bold text-center wow animate__animated animate__slideInLeft"
-      >
-        My Services
-      </h1>
-      <h1
-        class="text-center text-xl wow animate__animated animate__slideInRight"
-      >
-        <i class="ri-subtract-line align-middle text-6xl text-red-600"></i> What
-        I Provide
-        <i class="ri-subtract-line align-middle text-6xl text-red-600"></i>
-      </h1>
-      <div
-        class="grid xl:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 md:mt-10"
-      >
-        <div
-          class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2 wow animate__animated animate__zoomIn hover:scale-105 hover:duration-700"
-        >
-          <div class="table m-auto p-3 bg-gray-200 rounded-full">
-            <img src="services/webdesign.png" alt="" class="text-center w-24" />
-          </div>
-          <p class="text-2xl font-bold px-5 pb-2">FrontEnd Development</p>
-          <p class="px-5 text-md text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti
-            repudiandae saepe sequi inventore accusamus, reprehenderit, et illo
-            consectetur fugit quia!
-          </p>
-        </div>
-
-        <div
-          class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2 wow animate__animated animate__zoomIn hover:scale-105 hover:duration-700"
-        >
-          <div class="table m-auto p-3 bg-gray-200 rounded-full">
-            <img
-              src="services/webdevelopment.png"
-              alt=""
-              class="text-center w-24"
-            />
-          </div>
-          <p class="text-2xl font-bold px-5 pb-2">BackEnd Development</p>
-          <p class="px-5 text-md text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti
-            repudiandae saepe sequi inventore accusamus, reprehenderit, et illo
-            consectetur fugit quia!
-          </p>
-        </div>
-
-        <div
-          class="bg-blue-600 rounded-xl hover:bg-red-600 shadow-2xl p-2 wow animate__animated animate__zoomIn hover:scale-105 hover:duration-700"
-        >
-          <div class="table m-auto p-3 bg-gray-200 rounded-full">
-            <img src="services/fullstack.png" alt="" class="text-center w-24" />
-          </div>
-          <p class="text-2xl font-bold px-5 pb-2">FullStack Development</p>
-          <p class="px-5 text-md text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            in ipsam facilis dolorum magni quidem velit omnis eligendi, corrupti
-            repudiandae saepe sequi inventore accusamus, reprehenderit, et illo
-            consectetur fugit quia!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- services section ends  -->
-
-    <!-- Portfolio section starts  -->
-    <div class="lg:px-32 py-24 md:px-10 px-2" id="portfolio">
-      <h1
-        class="text-center text-3xl font-bold wow animate__animated animate__backInLeft"
-      >
-        PortFolio
-      </h1>
-      <h1
-        class="text-xl font-bold text-center wow animate__animated animate__slideInLeft"
-      >
-        <i class="ri-subtract-line align-middle text-6xl text-red-600"></i> My
-        Work <i class="ri-subtract-line align-middle text-6xl text-red-600"></i>
-      </h1>
-
-      <div class="owl-carousel owl-portfolio">
-        <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
-          <div class="wow animate__animated animate__backInLeft">
-            <img src="image/modernweb.jpg" alt="" class="rounded-xl" />
-          </div>
-          <div class="lg:mt-16 wow animate__animated animate__backInRight">
-            <h1 class="md:text-xl text-lg font-bold sm:my-2">Modern Website</h1>
-            <h1 class="sm:text-lg text-sm">
-              Website adaptable to all devices with UI components and animated
-              Interactions.
-            </h1>
-            <h1 class="mt-4">
-              <a
-                href=""
-                class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800"
-                >Demo <i class="ri-arrow-right-line align-middle"></i
-              ></a>
-            </h1>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
-          <div class="wow animate__animated animate__backInRight">
-            <img src="image/foodwebsite.png" alt="" class="rounded-xl" />
-          </div>
-          <div class="lg:mt-16 wow animate__animated animate__backInLeft">
-            <h1 class="md:text-xl text-lg font-bold sm:my-2">
-              Commercial Website
-            </h1>
-            <h1 class="sm:text-lg text-sm">
-              Website adaptable to all devices with UI components and animated
-              Interactions.
-            </h1>
-            <h1 class="mt-4">
-              <a
-                href=""
-                class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800"
-                >Demo <i class="ri-arrow-right-line align-middle"></i
-              ></a>
-            </h1>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 md:gap-10 gap-4 py-10">
-          <div class="wow animate__animated animate__backInRight">
-            <img src="image/educationwebsite.png" alt="" class="rounded-xl" />
-          </div>
-          <div class="lg:mt-16 wow animate__animated animate__backInLeft">
-            <h1 class="md:text-xl text-lg font-bold sm:my-2">
-              Education Website
-            </h1>
-            <h1 class="sm:text-lg text-sm">
-              Website adaptable to all devices with UI components and animated
-              Interactions.
-            </h1>
-            <h1 class="mt-4">
-              <a
-                href=""
-                class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-800"
-                >Demo <i class="ri-arrow-right-line align-middle"></i
-              ></a>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- portfolio section ends  -->
-
-    <!-- contact section starts  -->
-    <div class="lg:px-32 py-28 md:px-10 px-9" id="contact">
-      <div class="text-center">
-        <h1
-          class="text-4xl font-bold wow animate__animated animate__slideInDown"
-        >
-          Contact Me
-        </h1>
-        <h1
-          class="text-lg font-semibold my-2 wow animate__animated animate__slideInLeft"
-        >
-          <i class="ri-subtract-line align-middle text-3xl text-red-600"></i>
-          Get in Touch
-          <i class="ri-subtract-line align-middle text-3xl text-red-600"></i>
-        </h1>
-      </div>
-      <div class="grid md:grid-cols-2 gap-10 mt-10 grid-cols-1">
-        <div class="left-side">
-          <div
-            class="flex my-4 wow animate__animated animate__slideInLeft"
-            data-wow-duration="2s"
-            data-wow-delay="0.2s"
-          >
-            <p class="text-6xl"><i class="ri-phone-line text-blue-600"></i></p>
-            <div class="mx-2">
-              <p class="text-xl">Call Me</p>
-              <p class="text-xl">9827250670</p>
-            </div>
-          </div>
-
-          <div
-            class="flex my-4 wow animate__animated animate__slideInLeft"
-            data-wow-duration="2s"
-            data-wow-delay="0.5s"
-          >
-            <p class="text-6xl"><i class="ri-mail-line text-blue-600"></i></p>
-            <div class="mx-2">
-              <p class="text-xl">Email</p>
-              <p class="text-xl">jectionjection@gmail.com</p>
-            </div>
-          </div>
-
-          <div
-            class="flex my-4 wow animate__animated animate__slideInLeft"
-            data-wow-duration="2s"
-            data-wow-delay="0.8s"
-          >
-            <p class="text-6xl">
-              <i class="ri-map-pin-line text-blue-600"></i>
-            </p>
-            <div class="mx-2">
-              <p class="text-xl">Location</p>
-              <p class="text-xl">Ratnanagar-14, Chitwan, Nepal</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="right-side" id="formcontact">
-          <form id="form">
-            <input
-              type="text"
-              name="from_name"
-              id="from_name"
-              placeholder="Your Name"
-              class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__fadeInTopRight"
-            />
-
-            <!-- <input
-              type="text"
-              name="to_name"
-              id="to_name"
-              placeholder="Receiver Name"
-              class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__fadeInTopRight"
-            /> -->
-
-            <input
-              type="text"
-              name="email_id"
-              id="email_id"
-              placeholder="Your Email"
-              class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__fadeInTopRight"
-            />
-            <textarea
-              name="message"
-              id="message"
-              cols="10"
-              rows="6"
-              placeholder="Your Message"
-              class="w-full px-4 py-2 my-2 rounded-lg bg-gray-800 shadow wow animate__animated animate__zoomInRight"
-            ></textarea>
-            <input
-              id="button"
-              type="submit"
-              value="Send Email"
-              class="text-xl font-bold bg-blue-600 text-white px-4 py-2 rounded-xl cursor-pointer"
-            />
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- contact section ends  -->
-
-    <!-- Footer section starts  -->
-    <div class="lg:px-32 md:px-10 px-9 py-16 bg-blue-600 text-white">
-      <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
-        <div
-          class="wow animate__animated animate__slideInLeft"
-          data-wow-duration="2s"
-          data-wow-delay="0.2s"
-        >
-          <p class="text-4xl font-bold">Jeshan Tiwari</p>
-          <p class="text-xl px-4">FullStack Developper</p>
-          <p
-            class="my-5 w-fit bg-red-600 rounded-xl hover:bg-red-800 px-4 py-4 text-xl font-bold cursor-pointer"
-          >
-            <a href="" class="">Download CV </a>
-            <i class="ri-download-2-line align-middle"></i>
-          </p>
-        </div>
-
-        <div class="" data-wow-duration="2s" data-wow-delay="0.1s">
-          <p class="text-4xl font-bold">Quick Links</p>
-          <ul class="my-2">
-            <li class="hover:text-slate-300 font-bold"><a href="">Home</a></li>
-            <li class="hover:text-slate-300 font-bold"><a href="">About</a></li>
-            <li class="hover:text-slate-300 font-bold">
-              <a href="">Services</a>
-            </li>
-            <li class="hover:text-slate-300 font-bold">
-              <a href="">Skills</a>
-            </li>
-            <li class="hover:text-slate-300 font-bold">
-              <a href="">PortFolio</a>
-            </li>
+          <!-- Desktop links -->
+          <ul class="hidden lg:flex items-center gap-7 xl:gap-10 text-sm xl:text-base">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skill" class="nav-link">Skills</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
-        </div>
 
-        <div
-          class="wow animate__animated animate__slideInRight"
-          data-wow-duration="2s"
-          data-wow-delay="0s"
-        >
-          <h1 class="text-4xl font-bold">Contact Us</h1>
-          <div class="my-3">
-            <i
-              class="ri-instagram-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"
-            ></i>
-            <i
-              class="ri-facebook-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"
-            ></i>
-            <i
-              class="ri-linkedin-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"
-            ></i>
-            <i
-              class="ri-twitter-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"
-            ></i>
-            <i
-              class="ri-github-line text-4xl hover:text-yellow-400 cursor-pointer mx-2"
-            ></i>
+          <!-- Right actions -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <button
+              id="themeToggle"
+              onclick="toggleTheme()"
+              class="w-10 h-10 rounded-xl flex items-center justify-center bg-card border border-slate-200 dark:border-white/10 hover:scale-110 transition-transform duration-300"
+              aria-label="Toggle theme"
+            >
+              <i id="iconSun" class="ri-sun-line text-xl text-amber-400 hidden"></i>
+              <i id="iconMoon" class="ri-moon-line text-xl text-indigo-400"></i>
+            </button>
+
+            <a
+              href="#contact"
+              class="bg-gradient-accent hidden sm:inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-glow hover:scale-105 hover:shadow-lg transition-all duration-300"
+            >
+              Hire Me
+              <i class="ri-arrow-right-line"></i>
+            </a>
+
+            <!-- Hamburger -->
+            <button
+              id="menuBtn"
+              onclick="toggleMobileMenu()"
+              class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center bg-card border border-slate-200 dark:border-white/10 transition-colors duration-300 relative"
+              aria-label="Menu"
+            >
+              <i id="menuOpen" class="ri-menu-3-line text-2xl"></i>
+              <i id="menuClose" class="ri-close-line text-2xl hidden"></i>
+            </button>
           </div>
         </div>
       </div>
 
+      <!-- Mobile menu -->
       <div
-        class="sm:flex sm:justify-between mt-10 bg-black sm:p-4 p-2 rounded-lg"
+        id="mobileMenu"
+        class="lg:hidden bg-nav backdrop-blur-xl border-t border-slate-200 dark:border-white/10 transition-all duration-500 overflow-hidden"
+        style="max-height: 0"
       >
-        <p class="wow animate__animated animate__slideInLeft">
-          Copyright &copy; 2022.All Rights Reserved.
-        </p>
-        <p class="wow animate__animated animate__slideInRight">
-          Developed by Jeshan Tiwari
-        </p>
-      </div>
-    </div>
-    <!-- Footer Section ends  -->
-    <!-- gototop button starts  -->
-    <div class="fixed z-40 bottom-4 sm:bottom-10 left-6" id="upbutton">
-      <a href="#home"
-        ><i
-          class="p-4 text-xl text-white bg-yellow-400 rounded-full ri-arrow-up-line font-bold"
-        ></i
-      ></a>
-    </div>
-    <!-- gototop button ends  -->
-    <!-- mobile navigation bar starts  -->
-    <div class="fixed top-0 left-0 right-0 z-50 bg-red-600 md:hidden">
-      <div class="px-10 py-5">
-        <div class="flex justify-between">
-          <div>
-            <h1 class="text-2xl font-bold">
-              Jes<span class="text-black">H</span>an
-              <span class="text-green-600 text-3xl">.</span>
-            </h1>
-          </div>
-
-          <div>
-            <div class="inline-block mx-2" onclick="mobNav()">
-              <i
-                class="ri-menu-line align-middle font-bold text-2xl"
-                id="movopen"
-              ></i>
-              <i
-                class="ri-close-line align-middle font-bold text-2xl"
-                id="movclose"
-              ></i>
-            </div>
-            <div class="text-xl inline-block" onclick="darkLight()">
-              <i class="ri-sun-line align-middle" id="sunn"></i>
-              <i class="ri-moon-line align-middle hidden" id="moonn"></i>
-            </div>
-          </div>
-        </div>
-
-        <ul
-          class="w-full fixed top-12 pt-10 left-0 right-0 bottom-0 bg-red-600 opacity-80"
-          id="mobnav"
-        >
-          <li
-            class="text-center my-10 text-2xl font-bold hover:text-yellow-400"
-          >
-            <a href="#home" onclick="mobNav()">Home</a>
+        <ul class="px-6 py-4 space-y-1">
+          <li>
+            <a href="#home" onclick="toggleMobileMenu()"
+              class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold link-item hover:bg-card transition-colors duration-300">
+              Home <i class="ri-home-4-line"></i>
+            </a>
           </li>
-          <li
-            class="text-center my-10 text-2xl font-bold hover:text-yellow-400"
-          >
-            <a href="#about" onclick="mobNav()">About</a>
+          <li>
+            <a href="#about" onclick="toggleMobileMenu()"
+              class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold link-item hover:bg-card transition-colors duration-300">
+              About <i class="ri-user-line"></i>
+            </a>
           </li>
-          <li
-            class="text-center my-10 text-2xl font-bold hover:text-yellow-400"
-          >
-            <a href="#skill" onclick="mobNav()">Skill</a>
+          <li>
+            <a href="#skill" onclick="toggleMobileMenu()"
+              class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold link-item hover:bg-card transition-colors duration-300">
+              Skills <i class="ri-code-s-slash-line"></i>
+            </a>
           </li>
-          <li
-            class="text-center my-10 text-2xl font-bold hover:text-yellow-400"
-          >
-            <a href="#services" onclick="mobNav()">Services</a>
+          <li>
+            <a href="#services" onclick="toggleMobileMenu()"
+              class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold link-item hover:bg-card transition-colors duration-300">
+              Services <i class="ri-service-line"></i>
+            </a>
           </li>
-          <li
-            class="text-center my-10 text-2xl font-bold hover:text-yellow-400"
-          >
-            <a href="#portfolio" onclick="mobNav()">Portfolio</a>
+          <li>
+            <a href="#portfolio" onclick="toggleMobileMenu()"
+              class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold link-item hover:bg-card transition-colors duration-300">
+              Portfolio <i class="ri-briefcase-4-line"></i>
+            </a>
           </li>
-          <li
-            class="text-center my-10 text-2xl font-bold hover:text-yellow-400"
-          >
-            <a href="#contact" onclick="mobNav()">Contact</a>
+          <li>
+            <a href="#contact" onclick="toggleMobileMenu()"
+              class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold link-item hover:bg-card transition-colors duration-300">
+              Contact <i class="ri-chat-3-line"></i>
+            </a>
+          </li>
+          <li class="pt-2 pb-4 sm:hidden">
+            <a href="#contact"
+              class="bg-gradient-accent block text-center text-white font-semibold px-5 py-3 rounded-xl shadow-glow transition-transform duration-300">
+              Hire Me
+            </a>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
+    <!-- ====== NAVBAR END ====== -->
 
-    <!-- mobile navigation bar ends  -->
+    <!-- ====== HERO ====== -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center overflow-hidden pt-16 lg:pt-20"
+    >
+      <!-- Dark background: gradient mesh -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-indigo-950/60 to-slate-950"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-transparent to-slate-950"></div>
 
-    <!-- js part here  -->
+      <!-- Floating gradient blobs -->
+      <div class="absolute -top-24 -right-24 w-[30rem] h-[30rem] rounded-full bg-indigo-600/20 blur-3xl animate-blob pointer-events-none"></div>
+      <div class="absolute bottom-10 left-1/4 w-80 h-80 rounded-full bg-fuchsia-600/15 blur-3xl animate-blob pointer-events-none" style="animation-delay: 3s"></div>
+      <div class="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-violet-600/10 blur-3xl animate-blob pointer-events-none" style="animation-delay: 5s"></div>
+
+      <!-- Hero content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-0">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+          <!-- Left: text -->
+          <div class="order-2 lg:order-1 text-center lg:text-left">
+            <p class="inline-flex items-center gap-2 text-indigo-400 font-semibold tracking-wide uppercase text-sm mb-4">
+              <span class="w-8 h-px bg-gradient-accent inline-block"></span>
+              Hey, I am
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+              Jeshan Tiwari
+            </h1>
+            <div class="mt-4 text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-300 flex flex-wrap items-baseline gap-2 justify-center lg:justify-start">
+              I'm a <span class="typing text-gradient"></span>
+            </div>
+            <p class="mt-6 text-slate-400 max-w-lg mx-auto lg:mx-0">
+              I’m a Software Engineer turning ideas into modern, scalable, and beautifully crafted digital experiences.
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-4 justify-center lg:justify-start">
+              <a
+                href="#contact"
+                class="bg-gradient-accent inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-xl shadow-glow hover:scale-105 hover:shadow-xl transition-all duration-300"
+              >
+                Contact Me
+                <i class="ri-arrow-right-line"></i>
+              </a>
+              <a
+                href="#portfolio"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                View My Work
+                <i class="ri-eye-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: framed portrait -->
+          <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div class="relative">
+              <!-- Glow behind portrait -->
+              <div class="absolute -inset-10 bg-gradient-accent opacity-20 blur-3xl rounded-full pointer-events-none"></div>
+              <div class="absolute -top-10 -left-8 w-40 h-40 rounded-full bg-fuchsia-500/25 blur-2xl animate-blob pointer-events-none" style="animation-delay:1s"></div>
+              <div class="absolute -bottom-8 -right-6 w-32 h-32 rounded-full bg-indigo-500/25 blur-2xl animate-blob pointer-events-none" style="animation-delay:4s"></div>
+
+              <!-- Portrait frame -->
+              <div class="relative w-60 sm:w-72 lg:w-80 xl:w-[24rem] aspect-[3/4] rounded-3xl overflow-hidden border border-white/15 shadow-2xl ring-1 ring-white/10 hover:scale-105 transition-transform duration-500">
+                <img
+                  src="image/jeshan.jpg"
+                  alt="Jeshan Tiwari — Full Stack Developer"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+
+              <!-- Floating badge: Open to Work -->
+              <div class="absolute -left-4 sm:-left-10 top-12 bg-slate-900/95 backdrop-blur-md border-2 border-white/40 text-white px-5 py-3 rounded-xl text-sm font-bold shadow-2xl animate-float flex items-center gap-2.5">
+                <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="drop-shadow-sm">Open to Work</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll down indicator -->
+      <a
+        href="#about"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors duration-300"
+      >
+        <span class="text-xs uppercase tracking-widest">Scroll</span>
+        <i class="ri-arrow-down-s-line text-2xl animate-bounce"></i>
+      </a>
+    </section>
+    <!-- ====== HERO END ====== -->
+
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <h2 class="text-3xl lg:text-4xl font-extrabold">
+            About <span class="text-gradient">Me</span>
+          </h2>
+          <p class="mt-3 text-muted max-w-xl mx-auto">
+            Get to know more about my background, experience and skills.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Image -->
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-accent opacity-20 blur-2xl rounded-3xl"></div>
+            <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <img
+                src="image/aboutme.png"
+                alt="Jeshan Tiwari portrait"
+                class="w-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <!-- Floating badge -->
+            <div
+              class="absolute -bottom-5 -right-3 sm:right-6 bg-gradient-accent text-white px-5 py-4 rounded-2xl shadow-glow animate-float"
+            >
+              <p class="text-2xl font-extrabold">2.5+</p>
+              <p class="text-xs font-medium opacity-90">Years of Experience</p>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="reveal">
+            <h3 class="text-2xl font-bold">
+              Full Stack <span class="text-gradient">Web Developer</span>
+            </h3>
+            <p class="mt-4 text-muted leading-relaxed">
+             I'm Jeshan, a Software Engineer with more than 2.5 years of professional experience in web development. I have built and maintained a variety of web applications, gaining strong hands-on experience in both front-end and back-end development. I enjoy designing scalable, efficient, and user-focused solutions while continuously improving my technical skills and applying modern software engineering practices.
+            </p>
+
+            <!-- Tabs -->
+            <div x-data="{ opentab: 'experience' }" class="mt-8">
+              <!-- Tab buttons -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <template x-for="tab in ['experience', 'education', 'skills']" :key="tab">
+                  <button
+                    @click="opentab = tab"
+                    class="px-5 py-2.5 rounded-xl text-sm font-semibold capitalize transition-all duration-300"
+                    :class="opentab === tab
+                      ? 'bg-gradient-accent text-white shadow-glow'
+                      : 'bg-card text-muted border border-slate-200 dark:border-white/10'"
+                  >
+                    <span x-text="tab"></span>
+                  </button>
+                </template>
+              </div>
+
+              <!-- Experience -->
+              <div
+                x-show="opentab === 'experience'"
+                class="bg-card rounded-2xl p-6 border border-slate-200 dark:border-white/10 space-y-4"
+                x-transition
+              >
+                <div class="flex items-start gap-4">
+                  <span class="w-11 h-11 shrink-0 rounded-xl bg-accent-soft text-accent dark:text-indigo-300 flex items-center justify-center text-xl ri-briefcase-4-line"></span>
+                  <div>
+                    <h4 class="font-bold">Web Developer</h4>
+                    <p class="text-muted text-sm mt-1">2.5 year work experience in Web Development field.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="w-11 h-11 shrink-0 rounded-xl bg-accent-soft text-accent dark:text-indigo-300 flex items-center justify-center text-xl ri-graduation-cap-line"></span>
+                  <div>
+                    <h4 class="font-bold">Instructor</h4>
+                    <p class="text-muted text-sm mt-1">Worked as an instructor at an institute.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="w-11 h-11 shrink-0 rounded-xl bg-accent-soft text-accent dark:text-indigo-300 flex items-center justify-center text-xl ri-pen-nib-line"></span>
+                  <div>
+                    <h4 class="font-bold">Web Designer</h4>
+                    <p class="text-muted text-sm mt-1">Worked as a professional web designer.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div
+                x-show="opentab === 'education'"
+                class="bg-card rounded-2xl p-6 border border-slate-200 dark:border-white/10 space-y-4"
+                x-transition
+              >
+                <div class="flex items-start gap-4">
+                  <span class="w-11 h-11 shrink-0 rounded-xl bg-accent-soft text-accent dark:text-indigo-300 flex items-center justify-center text-xl ri-graduation-cap-line"></span>
+                  <div>
+                    <h4 class="font-bold">BCA</h4>
+                    <p class="text-muted text-sm mt-1">Bachelor in Computer Application (T.U.).</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="w-11 h-11 shrink-0 rounded-xl bg-accent-soft text-accent dark:text-indigo-300 flex items-center justify-center text-xl ri-code-box-line"></span>
+                  <div>
+                    <h4 class="font-bold">Full Stack Course</h4>
+                    <p class="text-muted text-sm mt-1">Full Stack Web Development Course at B.I.T.S.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="w-11 h-11 shrink-0 rounded-xl bg-accent-soft text-accent dark:text-indigo-300 flex items-center justify-center text-xl ri-keyboard-box-line"></span>
+                  <div>
+                    <h4 class="font-bold">Computer Operator</h4>
+                    <p class="text-muted text-sm mt-1">Computer Operator Certificate.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skills -->
+              <div
+                x-show="opentab === 'skills'"
+                class="bg-card rounded-2xl p-6 border border-slate-200 dark:border-white/10 flex flex-wrap gap-3"
+                x-transition
+              >
+                <span class="px-4 py-2 rounded-full bg-accent-soft text-accent dark:text-indigo-300 text-sm font-semibold">Full Stack Development</span>
+                <span class="px-4 py-2 rounded-full bg-accent-soft text-accent dark:text-indigo-300 text-sm font-semibold">Web Interface Design</span>
+                <span class="px-4 py-2 rounded-full bg-accent-soft text-accent dark:text-indigo-300 text-sm font-semibold">Graphic Design</span>
+                <span class="px-4 py-2 rounded-full bg-accent-soft text-accent dark:text-indigo-300 text-sm font-semibold">Video Editing</span>
+                <span class="px-4 py-2 rounded-full bg-accent-soft text-accent dark:text-indigo-300 text-sm font-semibold">Frameworks</span>
+                <span class="px-4 py-2 rounded-full bg-accent-soft text-accent dark:text-indigo-300 text-sm font-semibold">Responsive UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== ABOUT END ====== -->
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skill" class="py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute top-1/3 -left-32 w-72 h-72 rounded-full bg-violet-600/10 blur-3xl pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-14 reveal">
+          <h2 class="text-3xl lg:text-4xl font-extrabold">
+            My <span class="text-gradient">Skills</span>
+          </h2>
+          <p class="mt-3 text-muted max-w-xl mx-auto">
+            Technologies I work with and my proficiency levels.
+          </p>
+        </div>
+
+        <!-- Language icons -->
+        <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300">
+            <img src="icons/html.png" alt="HTML" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+            <span class="font-semibold text-sm text-muted group-hover:text-primary transition-colors duration-300">HTML</span>
+          </div>
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300">
+            <img src="icons/css.png" alt="CSS" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+            <span class="font-semibold text-sm text-muted group-hover:text-primary transition-colors duration-300">CSS</span>
+          </div>
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300">
+            <img src="icons/js.png" alt="JavaScript" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+            <span class="font-semibold text-sm text-muted group-hover:text-primary transition-colors duration-300">JS</span>
+          </div>
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300">
+            <img src="icons/php.png" alt="PHP" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+            <span class="font-semibold text-sm text-muted group-hover:text-primary transition-colors duration-300">PHP</span>
+          </div>
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300">
+            <img src="icons/laravel.png" alt="Laravel" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+            <span class="font-semibold text-sm text-muted group-hover:text-primary transition-colors duration-300">Laravel</span>
+          </div>
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300">
+            <img src="icons/mysql (1).png" alt="MySQL" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+            <span class="font-semibold text-sm text-muted group-hover:text-primary transition-colors duration-300">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Technical skill levels -->
+        <div class="mt-16 reveal">
+          <h3 class="text-2xl font-bold text-center mb-10">
+            Technical <span class="text-gradient">Skill Level</span>
+          </h3>
+          <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold">HTML</span>
+                  <span class="text-accent dark:text-indigo-300 font-semibold">90%</span>
+                </div>
+                <div class="h-2.5 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                  <div class="skill-bar h-full rounded-full bg-gradient-accent shadow-glow" data-width="90"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold">CSS</span>
+                  <span class="text-accent dark:text-indigo-300 font-semibold">70%</span>
+                </div>
+                <div class="h-2.5 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                  <div class="skill-bar h-full rounded-full bg-gradient-accent shadow-glow" data-width="70"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold">JavaScript</span>
+                  <span class="text-accent dark:text-indigo-300 font-semibold">55%</span>
+                </div>
+                <div class="h-2.5 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                  <div class="skill-bar h-full rounded-full bg-gradient-accent shadow-glow" data-width="55"></div>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold">PHP</span>
+                  <span class="text-accent dark:text-indigo-300 font-semibold">75%</span>
+                </div>
+                <div class="h-2.5 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                  <div class="skill-bar h-full rounded-full bg-gradient-accent shadow-glow" data-width="75"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold">Laravel</span>
+                  <span class="text-accent dark:text-indigo-300 font-semibold">80%</span>
+                </div>
+                <div class="h-2.5 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                  <div class="skill-bar h-full rounded-full bg-gradient-accent shadow-glow" data-width="80"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold">MySQL</span>
+                  <span class="text-accent dark:text-indigo-300 font-semibold">45%</span>
+                </div>
+                <div class="h-2.5 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                  <div class="skill-bar h-full rounded-full bg-gradient-accent shadow-glow" data-width="45"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== SKILLS END ====== -->
+
+    <!-- ====== SERVICES ====== -->
+    <section id="services" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <h2 class="text-3xl lg:text-4xl font-extrabold">
+            My <span class="text-gradient">Services</span>
+          </h2>
+          <p class="mt-3 text-muted max-w-xl mx-auto">
+            What I can do for you — from design to deployment.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- FrontEnd -->
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:-translate-y-3 hover:border-indigo-500/60 transition-all duration-500">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center ring-1 ring-slate-200 dark:ring-white/20 mb-6 group-hover:scale-105 group-hover:shadow-glow transition-all duration-500">
+              <img src="services/webdesign.png" alt="FrontEnd Development" class="w-12 h-12 object-contain" />
+            </div>
+            <h3 class="text-xl font-bold mb-3">FrontEnd Development</h3>
+            <p class="text-muted leading-relaxed">
+              Modern, responsive and pixel-perfect user interfaces built with
+              HTML, CSS and JavaScript that look great on every device.
+            </p>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-accent dark:text-indigo-300 font-semibold group-hover:gap-4 transition-all duration-300">
+              Learn more <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- BackEnd -->
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:-translate-y-3 hover:border-indigo-500/60 transition-all duration-500">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center ring-1 ring-slate-200 dark:ring-white/20 mb-6 group-hover:scale-105 group-hover:shadow-glow transition-all duration-500">
+              <img src="services/webdevelopment.png" alt="BackEnd Development" class="w-12 h-12 object-contain" />
+            </div>
+            <h3 class="text-xl font-bold mb-3">BackEnd Development</h3>
+            <p class="text-muted leading-relaxed">
+              Robust server-side logic, databases and APIs powered by PHP,
+              Laravel and MySQL for scalable web applications.
+            </p>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-accent dark:text-indigo-300 font-semibold group-hover:gap-4 transition-all duration-300">
+              Learn more <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- FullStack -->
+          <div class="group bg-card border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:-translate-y-3 hover:border-indigo-500/60 transition-all duration-500 md:col-span-2 lg:col-span-1">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center ring-1 ring-slate-200 dark:ring-white/20 mb-6 group-hover:scale-105 group-hover:shadow-glow transition-all duration-500">
+              <img src="services/fullstack.png" alt="FullStack Development" class="w-12 h-12 object-contain" />
+            </div>
+            <h3 class="text-xl font-bold mb-3">FullStack Development</h3>
+            <p class="text-muted leading-relaxed">
+              End-to-end web development from concept to launch — design,
+              frontend, backend, database and deployment handled together.
+            </p>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-accent dark:text-indigo-300 font-semibold group-hover:gap-4 transition-all duration-300">
+              Learn more <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== SERVICES END ====== -->
+
+    <!-- ====== PORTFOLIO ====== -->
+    <section id="portfolio" class="py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute top-20 -right-32 w-96 h-96 rounded-full bg-indigo-600/10 blur-3xl pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-14 reveal">
+          <h2 class="text-3xl lg:text-4xl font-extrabold">
+            My <span class="text-gradient">Portfolio</span>
+          </h2>
+          <p class="mt-3 text-muted max-w-xl mx-auto">
+            A selection of projects I've designed and developed.
+          </p>
+        </div>
+
+        <div class="owl-carousel owl-theme owl-portfolio">
+          <!-- Project 1 -->
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-14 items-center px-1 py-4 mb-2">
+            <div class="group rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl">
+              <img
+                src="image/modernweb.jpg"
+                alt="Modern Website"
+                class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div>
+              <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent-soft text-accent dark:text-indigo-300 rounded-full mb-4">
+                Web Design
+              </span>
+              <h3 class="text-2xl lg:text-3xl font-bold mb-3">Modern Website</h3>
+              <p class="text-muted mb-6">
+                Website adaptable to all devices with modern UI components and
+                animated interactions.
+              </p>
+              <a
+                href="#contact"
+                class="bg-gradient-accent inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl shadow-glow hover:scale-105 transition-all duration-300"
+              >
+                View Demo <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-14 items-center px-1 py-4 mb-2">
+            <div class="group rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl">
+              <img
+                src="image/foodwebsite.png"
+                alt="Commercial Website"
+                class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div>
+              <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent-soft text-accent dark:text-indigo-300 rounded-full mb-4">
+                E-Commerce
+              </span>
+              <h3 class="text-2xl lg:text-3xl font-bold mb-3">Commercial Website</h3>
+              <p class="text-muted mb-6">
+                A feature-rich commercial platform with smooth interactions
+                built for real-world business needs.
+              </p>
+              <a
+                href="#contact"
+                class="bg-gradient-accent inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl shadow-glow hover:scale-105 transition-all duration-300"
+              >
+                View Demo <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-14 items-center px-1 py-4 mb-2">
+            <div class="group rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl">
+              <img
+                src="image/educationwebsite.png"
+                alt="Education Website"
+                class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div>
+              <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent-soft text-accent dark:text-indigo-300 rounded-full mb-4">
+                Education
+              </span>
+              <h3 class="text-2xl lg:text-3xl font-bold mb-3">Education Website</h3>
+              <p class="text-muted mb-6">
+                A clean, accessible platform for learning institutions with
+                engaging course content and layouts.
+              </p>
+              <a
+                href="#contact"
+                class="bg-gradient-accent inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl shadow-glow hover:scale-105 transition-all duration-300"
+              >
+                View Demo <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== PORTFOLIO END ====== -->
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <h2 class="text-3xl lg:text-4xl font-extrabold">
+            Contact <span class="text-gradient">Me</span>
+          </h2>
+          <p class="mt-3 text-muted max-w-xl mx-auto">
+            Have a project in mind? Let's talk about it.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 lg:gap-16">
+          <!-- Contact info -->
+          <div class="space-y-6">
+            <div class="bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex items-center gap-5 hover:-translate-y-1 hover:border-indigo-500/50 transition-all duration-300">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-gradient-accent text-white flex items-center justify-center text-2xl shadow-glow">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-muted font-semibold">Call Me</p>
+                <p class="font-bold text-lg">9827250670</p>
+              </div>
+            </div>
+
+            <div class="bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex items-center gap-5 hover:-translate-y-1 hover:border-indigo-500/50 transition-all duration-300">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-gradient-accent text-white flex items-center justify-center text-2xl shadow-glow">
+                <i class="ri-mail-line"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs uppercase tracking-wider text-muted font-semibold">Email</p>
+                <p class="font-bold truncate">jectionjection@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="bg-card border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex items-center gap-5 hover:-translate-y-1 hover:border-indigo-500/50 transition-all duration-300">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-gradient-accent text-white flex items-center justify-center text-2xl shadow-glow">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-muted font-semibold">Location</p>
+                <p class="font-bold">Ratnanagar-14, Chitwan, Nepal</p>
+              </div>
+            </div>
+
+            <!-- Socials -->
+            <div class="flex items-center gap-3 pt-2 pl-2">
+              <a href="#" aria-label="Instagram" class="w-11 h-11 rounded-xl bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center text-xl hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#" aria-label="Facebook" class="w-11 h-11 rounded-xl bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center text-xl hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300">
+                <i class="ri-facebook-line"></i>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="w-11 h-11 rounded-xl bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center text-xl hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300">
+                <i class="ri-linkedin-line"></i>
+              </a>
+              <a href="#" aria-label="Twitter" class="w-11 h-11 rounded-xl bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center text-xl hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300">
+                <i class="ri-twitter-line"></i>
+              </a>
+              <a href="#" aria-label="GitHub" class="w-11 h-11 rounded-xl bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center text-xl hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300">
+                <i class="ri-github-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div
+            class="bg-card border border-slate-200 dark:border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl"
+            id="formcontact"
+          >
+            <h3 class="text-xl font-bold mb-6">Send me a message</h3>
+            <form id="form" class="space-y-5">
+              <div>
+                <label for="from_name" class="block text-sm font-semibold mb-2">Your Name</label>
+                <input
+                  type="text"
+                  name="from_name"
+                  id="from_name"
+                  placeholder="John Doe"
+                  class="input-base bg-input w-full px-5 py-3.5 rounded-xl border border-slate-200 dark:border-white/10 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 transition-all duration-300"
+                />
+              </div>
+              <div>
+                <label for="email_id" class="block text-sm font-semibold mb-2">Your Email</label>
+                <input
+                  type="email"
+                  name="email_id"
+                  id="email_id"
+                  placeholder="john@example.com"
+                  class="input-base bg-input w-full px-5 py-3.5 rounded-xl border border-slate-200 dark:border-white/10 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 transition-all duration-300"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-semibold mb-2">Your Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="10"
+                  rows="5"
+                  placeholder="Tell me about your project..."
+                  class="input-base bg-input w-full px-5 py-3.5 rounded-xl border border-slate-200 dark:border-white/10 outline-none resize-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 transition-all duration-300"
+                ></textarea>
+              </div>
+              <button
+                id="button"
+                type="submit"
+                class="bg-gradient-accent w-full sm:w-auto text-white font-bold px-8 py-3.5 rounded-xl shadow-glow hover:scale-105 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <i class="ri-send-plane-line"></i>
+                Send Email
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== CONTACT END ====== -->
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="relative pt-16 pb-8">
+      <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 pb-12">
+          <!-- Bio -->
+          <div>
+            <a href="#home" class="text-2xl font-bold">
+              Jes<span class="text-gradient">H</span>an
+              <span class="text-gradient text-3xl">.</span>
+            </a>
+            <p class="mt-4 text-muted text-lg font-medium">Software Engineer</p>
+            <p class="mt-2 text-muted text-sm leading-relaxed max-w-xs">
+              Building modern, responsive and reliable web experiences from
+              Nepal for clients around the world.
+            </p>
+            <a
+              href="#"
+              class="mt-6 inline-flex items-center gap-2 bg-gradient-accent text-white text-sm font-semibold px-6 py-3 rounded-xl shadow-glow hover:scale-105 transition-all duration-300"
+            >
+              Download CV <i class="ri-download-2-line"></i>
+            </a>
+          </div>
+
+          <!-- Quick links -->
+          <div class="reveal">
+            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-3">
+              <li><a href="#home" class="group inline-flex items-center gap-2 link-item"><i class="ri-arrow-right-s-line text-accent dark:text-indigo-300 group-hover:translate-x-1 transition-transform duration-300"></i>Home</a></li>
+              <li><a href="#about" class="group inline-flex items-center gap-2 link-item"><i class="ri-arrow-right-s-line text-accent dark:text-indigo-300 group-hover:translate-x-1 transition-transform duration-300"></i>About</a></li>
+              <li><a href="#services" class="group inline-flex items-center gap-2 link-item"><i class="ri-arrow-right-s-line text-accent dark:text-indigo-300 group-hover:translate-x-1 transition-transform duration-300"></i>Services</a></li>
+              <li><a href="#skill" class="group inline-flex items-center gap-2 link-item"><i class="ri-arrow-right-s-line text-accent dark:text-indigo-300 group-hover:translate-x-1 transition-transform duration-300"></i>Skills</a></li>
+              <li><a href="#portfolio" class="group inline-flex items-center gap-2 link-item"><i class="ri-arrow-right-s-line text-accent dark:text-indigo-300 group-hover:translate-x-1 transition-transform duration-300"></i>Portfolio</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact us -->
+          <div class="reveal">
+            <h4 class="text-lg font-bold mb-4">Get In Touch</h4>
+            <ul class="space-y-3 text-muted">
+              <li class="flex items-center gap-3"><i class="ri-phone-line text-accent dark:text-indigo-300"></i> 9827250670</li>
+              <li class="flex items-center gap-3"><i class="ri-mail-line text-accent dark:text-indigo-300"></i> jectionjection@gmail.com</li>
+              <li class="flex items-center gap-3"><i class="ri-map-pin-line text-accent dark:text-indigo-300"></i> Ratnanagar-14, Chitwan, Nepal</li>
+            </ul>
+            <div class="flex items-center gap-3 mt-6">
+              <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-lg bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"><i class="ri-instagram-line"></i></a>
+              <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-lg bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"><i class="ri-facebook-line"></i></a>
+              <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-lg bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"><i class="ri-linkedin-line"></i></a>
+              <a href="#" aria-label="GitHub" class="w-10 h-10 rounded-lg bg-card border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-gradient-accent hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"><i class="ri-github-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-200 dark:border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted"
+        >
+          <p>Copyright &copy; 2026. All Rights Reserved.</p>
+          <p>
+            Developed with <i class="ri-heart-3-fill text-rose-500 animate-pulse"></i> by
+            <span class="font-semibold text-gradient">Jeshan Tiwari</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== FOOTER END ====== -->
+
+    <!-- Scroll to top -->
+    <button
+      id="upbutton"
+      class="fixed bottom-5 right-24 z-40 w-14 h-14 rounded-2xl bg-gradient-accent text-white text-3xl border-2 border-white/60 ring-2 ring-black/10 shadow-[0_10px_30px_-5px_rgba(139,92,246,0.9)] flex items-center justify-center hover:scale-110 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 opacity-0 pointer-events-none"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Scroll to top"
+      title="Back to top"
+    >
+      <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- ====== SCRIPTS ====== -->
+    <!-- Mobile menu -->
     <script>
-      var mob = document.getElementById("mobnav");
-      var open = document.getElementById("movopen");
-      var close = document.getElementById("movclose");
-      mob.style.marginLeft = "-110%";
-      close.style.display = "none";
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const openIcon = document.getElementById("menuOpen");
+        const closeIcon = document.getElementById("menuClose");
+        const menuBtn = document.getElementById("menuBtn");
 
-      function mobNav() {
-        if (mob.style.marginLeft == "-110%") {
-          mob.style.marginLeft = "0px";
-          close.style.display = "block";
-          open.style.display = "none";
-          mob.style.transition = "0.8s";
+        if (menu.style.maxHeight === "0px" || menu.style.maxHeight === "") {
+          menu.style.maxHeight = menu.scrollHeight + "px";
+          openIcon.classList.add("hidden");
+          closeIcon.classList.remove("hidden");
+          menuBtn.classList.add("text-accent");
         } else {
-          mob.style.marginLeft = "-110%";
-          open.style.display = "block";
-          close.style.display = "none";
-          mob.style.transition = "1s";
+          menu.style.maxHeight = "0px";
+          closeIcon.classList.add("hidden");
+          openIcon.classList.remove("hidden");
+          menuBtn.classList.remove("text-accent");
         }
       }
     </script>
 
+    <!-- Theme toggle -->
     <script>
-      let sun = document.getElementById("sun");
-      let mon = document.getElementById("moon");
-      let body = document.getElementById("body");
-      let nav = document.getElementById("nav");
-      let sunn = document.getElementById("sunn");
-      let moonn = document.getElementById("moonn");
-
-      let formcontact = document.getElementById("formcontact");
-
-      function darkLight() {
-        sunn.classList.toggle("hidden");
-        moonn.classList.toggle("hidden");
-        sun.classList.toggle("hidden");
-        mon.classList.toggle("hidden");
-        body.classList.toggle("bg-[#dad4d3]");
-        body.classList.toggle("text-white");
-        formcontact.classList.toggle("text-white");
+      function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.classList.toggle("dark");
+        const iconSun = document.getElementById("iconSun");
+        const iconMoon = document.getElementById("iconMoon");
+        if (isDark) {
+          iconMoon.classList.remove("hidden");
+          iconSun.classList.add("hidden");
+        } else {
+          iconSun.classList.remove("hidden");
+          iconMoon.classList.add("hidden");
+        }
       }
+    </script>
 
-      // typewriter js
+    <!-- Typewriter + navbar scroll state + scroll-to-top -->
+    <script>
       var typed = new Typed(".typing", {
         strings: [
-          "FullStack Developper",
-          "Web Designer",
+          "Software Engineer",
+          "Web Developer",
           "Freelancer",
-          "Video Editor",
         ],
-        typespeed: 500,
-        backspeed: 40,
+        typeSpeed: 70,
+        backSpeed: 40,
         loop: true,
       });
-      // typewriter js end
 
-      
-
+      var navbar = document.getElementById("navbar");
       var upbutton = document.getElementById("upbutton");
-      upbutton.style.display = "none";
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if (window.scrollY > 640) {
-          upbutton.style.display = "block";
+
+      function scrollState() {
+        // navbar shadow
+        if (window.scrollY > 20) {
+          navbar.classList.add("shadow-lg");
         } else {
-          upbutton.style.display = "none";
+          navbar.classList.remove("shadow-lg");
         }
+        // scroll-to-top
+        if (window.scrollY > 640) {
+          upbutton.classList.remove("opacity-0", "pointer-events-none");
+          upbutton.classList.add("opacity-100");
+        } else {
+          upbutton.classList.remove("opacity-100");
+          upbutton.classList.add("opacity-0", "pointer-events-none");
+        }
+        // scrollspy
+        const sections = ["home", "about", "skill", "services", "portfolio", "contact"];
+        let current = "home";
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 120) current = id;
+        });
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+        });
       }
+
+      window.addEventListener("scroll", scrollState, { passive: true });
+      window.addEventListener("load", scrollState);
     </script>
 
+    <!-- Scroll reveal + skill bar animation -->
     <script>
-      // owl carousel starts
+      // Skill bars fill on view
+      const barObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.width = entry.target.dataset.width + "%";
+              barObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      document.querySelectorAll(".skill-bar").forEach((bar) => barObserver.observe(bar));
 
-      var owl = $(".owl-portfolio");
-      owl.owlCarousel({
+      // Generic section reveal
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("reveal-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll(".reveal:not(.reveal-visible)").forEach((el) =>
+        revealObserver.observe(el)
+      );
+    </script>
+
+    <!-- Owl carousel -->
+    <script>
+      $(".owl-portfolio").owlCarousel({
         items: 1,
         loop: true,
         margin: 10,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 4000,
         autoplayHoverPause: true,
+        nav: false,
       });
-
-      // owl carousel ends
     </script>
-    <!-- email.js enable -->
+
+    <!-- EmailJS contact form -->
     <script>
       const btn = document.getElementById("button");
 
-      document.getElementById("form").addEventListener("submit", function (event) {
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
           event.preventDefault();
 
-          btn.value = "Sending...";
+          btn.innerHTML = '<i class="ri-loader-2-line animate-spin"></i> Sending...';
 
           const serviceID = "default_service";
           const templateID = "template_qxvju8m";
 
           emailjs.sendForm(serviceID, templateID, this).then(
             () => {
-              btn.value = "Send Email";
+              btn.innerHTML = '<i class="ri-check-line"></i> Message Sent';
+              setTimeout(() => {
+                btn.innerHTML = '<i class="ri-send-plane-line"></i> Send Email';
+              }, 3000);
               Notify();
-            //   alert("Sent!");
-              from_name.value = "";
-              // to_name.value = "";
-              email_id.value = "";
-              message.value = "";
+              document.getElementById("from_name").value = "";
+              document.getElementById("email_id").value = "";
+              document.getElementById("message").value = "";
             },
             (err) => {
-              btn.value = "Send Email";
-              alert(JSON.stringify(err));
+              btn.innerHTML = '<i class="ri-send-plane-line"></i> Send Email';
+              toastr["error"]("Something went wrong. Please try again.");
             }
           );
         });
     </script>
 
     <script>
-        const Notify = () => {
-            toastr["success"]("Message Sent Successfully!");
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "positionClass": "toast-top-left",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "3000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-              }}
-        
+      const Notify = () => {
+        toastr.options = {
+          closeButton: true,
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          preventDuplicates: true,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "3000",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+        };
+        toastr["success"]("Message Sent Successfully!");
+      };
     </script>
-    <!-- email js enable ended  -->
-    <!--Start of Tawk.to Script-->
+
+    <!-- Tawk.to live chat -->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
@@ -952,12 +1276,5 @@
         s0.parentNode.insertBefore(s1, s0);
       })();
     </script>
-    <!--End of Tawk.to Script-->
-
-    <!-- wow js script here  -->
-    <script>
-      new WOW().init();
-    </script>
-    <!-- wow js script ends  -->
   </body>
 </html>
